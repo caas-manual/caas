@@ -1,0 +1,12 @@
+version: '2'
+services:
+  server:
+    container_name: jekyll
+    image: jekyll:v0.6
+    ports:
+      - "8089:4000"
+    volumes:
+      - ".:/src"
+        #    entrypoint: /bin/bash
+        #    stdin_open: true
+        #    tty: true

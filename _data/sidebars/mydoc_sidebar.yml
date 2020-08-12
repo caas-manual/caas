@@ -1,0 +1,45 @@
+entries:
+- title: Sidebar
+  folders:
+  - title: 참고자료
+    output: web
+    folderitems:
+    - title: Tooltips
+      url: /mydoc_adding_tooltips.html
+      output: web, pdf
+    - title: Alerts
+      url: /mydoc_alerts.html
+      output: web, pdf
+    - title: Conditional logic
+      url: /mydoc_conditional_logic.html
+      output: web, pdf
+    - title: Content reuse
+      url: /mydoc_content_reuse.html
+      output: web, pdf  
+    - title: Glossary layout
+      url: /mydoc_glossary.html
+      output: web, pdf  
+    - title: Icons
+      url: /mydoc_icons.html
+      output: web, pdf  
+    - title: Images
+      url: /mydoc_images.html
+      output: web, pdf 
+    - title: Knowledge-base layout
+      url: /mydoc_kb_layout.html
+      output: web, pdf
+    - title: Labels
+      url: /mydoc_labels.html
+      output: web, pdf 
+    - title: Lists
+      url: /mydoc_lists.html
+      output: web, pdf 
+    - title: Pages
+      url: /mydoc_pages.html
+      output: web, pdf 
+    - title: Shuffle layout
+      url: /mydoc_shuffle.html
+      output: web, pdf 
+    - title: Special layouts overview
+      url: /mydoc_special_layouts.html
+      output: web, pdf 

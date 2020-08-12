@@ -1,0 +1,190 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: 그룹공통 Chatbot Doc
+  version: 1.0
+  folders:
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: Chatbot 시작하기
+    output: web, pdf
+    folderitems:
+    - title: Chatbot 기본 상식
+      url: /index.html
+      output: web, pdf
+      type: homepage
+
+    - title: Chatbot 생성
+      url: /basic_create_chatbot.html
+      output: web, pdf
+
+  - title: Chatbot 만들기
+    output: web, pdf
+    folderitems:
+    - output: web, pdf
+      subfolders:
+      - title: Intents
+        output: web, pdf
+        subfolderitems: 
+        - title: Intent 이해하기
+          url: /intent_basic.html
+          output: web, pdf
+
+        # - title: Intent 구성요소
+        #   url: /intent_components.html
+        #   output: web, pdf
+
+        - title: Intent 답변유형 - Dialogflow
+          url: /intent_response_dialogflow.html
+          output: web, pdf
+              
+        - output: web, pdf        
+          subfolders:
+          - title: Intent 답변유형 - Chatflow
+            output: web, pdf
+            subfolderitems: 
+            - title: Chatflow 기본
+              url: /intent_response_chatflow.html
+              output: web, pdf
+
+            - title: Listen Node 
+              url: /intent_response_chatflow_listen.html
+              output: web, pdf
+              
+            - title: Speak Node 
+              url: /intent_response_chatflow_speak.html
+              output: web, pdf
+
+            - title: Slot Node
+              url: /intent_response_chatflow_slot.html
+              output: web, pdf
+
+            - title: Split Node
+              url: /intent_response_chatflow_split.html
+              output: web, pdf
+
+            - title: API Node
+              url: /intent_response_chatflow_api.html
+              output: web, pdf
+
+            - title: Jump Node
+              url: /intent_response_chatflow_jump.html
+              output: web, pdf
+
+            - title: Function Node
+              url: /intent_response_chatflow_function.html
+              output: web, pdf
+    
+    - output: web, pdf
+      subfolders:
+      - title: Entities
+        output: web, pdf
+        subfolderitems: 
+        - title: Entity 이해하기
+          url: /entity_basic.html
+          output: web, pdf
+
+        - title: Entity 만들기
+          url: /entity_custom.html
+          output: web, pdf
+        
+        - title: System Entity
+          url: /entity_system.html
+          output: web, pdf
+
+    - output: web, pdf
+      title: APIs
+      url: /api_basic.html      
+
+    - output: web, pdf
+      subfolders:
+      - title: Settings
+        output: web, pdf
+        subfolderitems: 
+        - output: web, pdf        
+          subfolders:
+          - title: Chatbot Info.
+            output: web, pdf
+            subfolderitems: 
+            - title: General
+              url: /chatbot_setting.html
+              output: web, pdf
+
+            - title: Language
+              url: /chatbot_setting_language.html
+              output: web, pdf
+
+            - title: Conversation
+              url: /chatbot_setting_conversation.html
+              output: web, pdf
+
+            - title: Fulfillment
+              url: /chatbot_setting_fulfillment.html
+              output: web, pdf
+
+            - title: Channel
+              url: /chatbot_setting_channel.html
+              output: web, pdf
+
+    - output: web, pdf
+      subfolders:
+      - title: Test
+        output: web, pdf
+        subfolderitems:
+        - title: Simulator
+          url: /test_simulator.html
+          output: web, pdf
+
+        - title: Bulk Test
+          url: /test_bulk.html
+          output: web, pdf
+  
+  - title: 채널 연계
+    output: web, pdf
+    folderitems:
+    - title: Native App(API)
+      url: /channel_native_app.html
+      output: web, pdf
+    
+    - title: Facebook
+      url: /channel_facebook.html
+      output: web, pdf
+    
+    - title: Kakaotalk
+      url: /channel_kakaotalk.html
+      output: web, pdf
+      
+  - title: Chatbot 운영하기
+    output: web, pdf
+    folderitems:
+    
+    - title: Histroy
+      url: /manage_history.html
+      output: web, pdf
+
+    - title: Training
+      url: /manage_training.html
+      output: web, pdf
+
+    - title: Dashboard
+      url: /manage_dashboard.html
+      output: web, pdf
+    
+    - title: 사용자 권한 관리
+      url: /manage_user_roles.html
+      output: web, pdf
+
+
+  
