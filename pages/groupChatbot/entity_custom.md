@@ -23,14 +23,14 @@ next: {
 
 해당 메뉴에서는 다음과 같은 내용을 설정할 수 있습니다.<br/> 
 
- - [사용자 정의 Entity 등록하기](entity_custom.html#사용자-정의-Entity-등록하기)
+ - [사용자 정의 Entity 등록하기](entity_custom.html#사용자-정의-entity-등록하기)
 
 <br/>또한 Entity를 등록/수정하며 아래와 같은 다양한 Entity를 만들 수 있습니다.<br/>
 
- - [매핑 Entity](entity_custom.html#매핑-Entity)
- - [리스트 Entity](entity_custom.html#리스트-Entity)
- - [복합 Entity (리스트형 / DOCUMENT 챗봇의 multi coffe 엔티티 참조)](entity_custom.html#복합-Entity)
- - [정규 표현식 Entity](entity_custom.html#정규-표현식-Entity)
+ - [매핑 Entity](entity_custom.html#매핑-entity)
+ - [리스트 Entity](entity_custom.html#리스트-entity)
+ - [복합 Entity (리스트형 / DOCUMENT 챗봇의 multi coffe 엔티티 참조)](entity_custom.html#복합-entity)
+ - [정규 표현식 Entity](entity_custom.html#정규-표현식-entity)
 
 <br/>메뉴에서 선택한 옵션에 따라 **매핑 Entity**, **리스트 Entity**, **복합 Entity**, **정규 표현식 Entity**를 만들 수 있습니다.
  또한 Entity의 종류를 결정하지는 않지만 Entity의 매칭에 영향을 주는 옵션으로 **자동 확장(Automated expansion)**과 **퍼지 매칭(Fuzzy matching)**이 있습니다.<br/>

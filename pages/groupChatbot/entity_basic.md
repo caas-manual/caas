@@ -24,7 +24,7 @@ next: {
 
 - [사용자 정의 Entity](entity_custom.html#사용자-정의-entity)
 - [시스템 Entity](entity_system.html#시스템-entity)
-- [Entity 업로드/다운로드](entity_basic.html#api-업로드다운로드)
+- [Entity 업로드/다운로드](entity_basic.html#entity-업로드다운로드)
 
 
 Entity의 종류에는 크게 두 가지가 있습니다. **사용자 정의 Entity**와 **시스템 Entity**가 있으며 각 Entity에 대한 자세한 내용은 위 항목을 클릭하여 확인할 수 있습니다.
