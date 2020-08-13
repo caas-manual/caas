@@ -36,7 +36,7 @@ Context 명을 입력할 때에는 다음과 같은 제약사항이 존재합니
 - Context명은 영어 대소문자를 구분하지 않습니다.
 - API 사용 시에는 모든 Context 명이 소문자를 사용합니다.
 
-{% include image.html file="intent/intent_basic_context.PNG" max-width="900" caption="Intent Context 입력" %} 
+{% include image.html file="intent/intent_basic_context.png" max-width="900" caption="Intent Context 입력" %} 
 
 #### 입력 및 출력 Contexts
 
@@ -58,7 +58,7 @@ Context를 사용하면 다음을 수행할 수 있습니다.
 
 각 활성 Context에는 Context가 활성 상태인 동안에 대화 차례 수를 정의하는 수명이 있습니다. 기본 수명은 일반 Intent의 경우 대화 차례 5회이고 **Follow-up Intent**의 경우 대화 차례 2회입니다. 모든 Context의 기본 LifeSpan을 재정의할 수 있습니다. 또한 모든 Context가 활성화된 후 20분이 지나면 만료됩니다. Intent가 이미 활성 상태인 출력 Context와 일치하면 수명 및 만료 타이머가 재설정됩니다.
 
-{% include image.html file="intent/intent_basic_context_2.PNG" max-width="900" caption="Intent 출력 Context LifeSpan 수정" %} 
+{% include image.html file="intent/intent_basic_context_2.png" max-width="900" caption="Intent 출력 Context LifeSpan 수정" %} 
 
 ##### 입력 Context
 
@@ -73,7 +73,7 @@ Context가 활성화되면 Dialogflow에서는 현재 활성 Context에 해당�
 
 아래의 화면과 같이 Intent 목록에서 Intent의 답변 유형이 Dialogflow 형인 Intent만 Follow-up Intent 생성이 가능합니다.해당 Intent 명의 오른쪽에 있는 + 버튼을 클릭해서, Custom / Fallback Follow-up Intent를 생성할 수 있습니다.
 
-{% include image.html file="intent/intent_basic_followup.PNG" max-width="900" caption="Intent Follow-up Intent 생성" %} 
+{% include image.html file="intent/intent_basic_followup.png" max-width="900" caption="Intent Follow-up Intent 생성" %} 
 
 ### Responses
 
@@ -91,18 +91,18 @@ Intent에 두 개 이상의 응답 변형을 정의하는 경우 에이전트는
 
 아래 화면과 같이 Default 탭에서는 Text Response와 Custom Payload 응답을 지원합니다. 
 
-{% include image.html file="intent/intent_basic_response.PNG" max-width="900" caption="Intent Response 추가 팝업" %} 
+{% include image.html file="intent/intent_basic_response.png" max-width="900" caption="Intent Response 추가 팝업" %} 
 
 1. Text Response
  - 기본적으로 Text Response는 Text로 응답을 보냅니다.
 
-{% include image.html file="intent/intent_basic_response_2.PNG" max-width="900" caption="Intent Text Response" %} 
+{% include image.html file="intent/intent_basic_response_2.png" max-width="900" caption="Intent Text Response" %} 
 
 2. Custom Payload
  - Custom Payload는 비표준 고급 응답을 처리합니다. 이러한 Custom Payload는 플랫폼 문서에 정의된 JSON 형식으로 제공됩니다.
  - 올바른 JSON 형식이 아닐 경우에는, 정상적으로 생성, 수정이 불가능합니다.
 
-{% include image.html file="intent/intent_basic_response_3.PNG" max-width="900" caption="Intent Custom Payload JSON 형식 에러" %} 
+{% include image.html file="intent/intent_basic_response_3.png" max-width="900" caption="Intent Custom Payload JSON 형식 에러" %} 
 
 ### Fulfillment
 
@@ -116,4 +116,4 @@ Fulfillment가 사용 설정된 Intent가 일치되는 경우 Dialogflow는 일�
 
 프로덕션 시스템에서 Fulfillment를 사용하려면 Webhook 서비스를 구현하고 배포해야 합니다. Fulfillment를 처리하려면 Webhook 서비스가 이 가이드에 지정된 대로 JSON 요청을 수락하고 JSON 응답을 반환해야 합니다.
 
-{% include image.html file="intent/intent_basic_fulfillment.PNG" max-width="900" caption="Intent Fulfillment 설정" %} 
+{% include image.html file="intent/intent_basic_fulfillment.png" max-width="900" caption="Intent Fulfillment 설정" %} 
