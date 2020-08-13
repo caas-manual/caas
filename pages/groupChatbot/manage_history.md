@@ -38,27 +38,27 @@ next: {
 
 **조회기간** : 대화 시작일시를 기준으로 조회하고자 하는 기간을 선택합니다.
 
-{% include image.html file="manage/history_filtering_date.JPG" max-width="900" caption="조회조건 - 조회기간" %}
+{% include image.html file="manage/history_filtering_date.JPG" max-width="900" caption="History 조회조건 - 조회기간" %}
 
 **시작 Intent명** : 대화가 시작된 Intent를 선택하여 조회가 가능합니다. 다중선택이 가능하며 아무것도 선택하지 않은 경우 Intent 전체 기준으로 조회됩니다.<br/>
 
-{% include image.html file="manage/history_filtering_intent.JPG" max-width="900" caption="조회조건 - 시작 Intent명" %}
+{% include image.html file="manage/history_filtering_intent.JPG" max-width="900" caption="History 조회조건 - 시작 Intent명" %}
 
 **Default Fallback** : 대화 내역에서 Default Fallback의 포함 여부를 선택할 수 있습니다.<br/>
 
-{% include image.html file="manage/history_filtering_default.JPG" max-width="900" caption="조회조건 - Default Fallback" %}
+{% include image.html file="manage/history_filtering_default.JPG" max-width="900" caption="History 조회조건 - Default Fallback" %}
 
 **채널** : Facebook Messenger나 Kakaotalk 등 챗봇에 연계된 채널을 선택할 수 있습니다. ***'Test'***를 선택하면 CAAS 내 [Simulator](test_simulator.html#시뮬레이터simulator)에서 입력한 대화들을 볼 수 있습니다.<br/>
 
-{% include image.html file="manage/history_filtering_channel.JPG" max-width="900" caption="조회조건 - 채널" %}
+{% include image.html file="manage/history_filtering_channel.JPG" max-width="900" caption="History 조회조건 - 채널" %}
 
 **감정분석** : 대화내역에서 선택한 감정분석 결과가 포함된 대화들을 조회할 수 있습니다. <br/>
 
-{% include image.html file="manage/history_filtering_sentiment.JPG" max-width="900" caption="조회조건 - 감정분석" %}
+{% include image.html file="manage/history_filtering_sentiment.JPG" max-width="900" caption="History 조회조건 - 감정분석" %}
 
 **User ID/대화 내용** : User ID와 대화 내용은 텍스트 입력을 통해 검색할 수 있습니다. User ID는 입력값과 동일한 값을 가진 대화를 조회하고, 대화 내용은 입력값을 포함하고 있는 대화를 조회합니다.<br/>
 
-{% include image.html file="manage/history_filtering_search.JPG" max-width="900" caption="조회조건 - User Id/대화 내용" %}
+{% include image.html file="manage/history_filtering_search.JPG" max-width="900" caption="History 조회조건 - User Id/대화 내용" %}
 
 ### 이력 정보
 #### 요약 정보
@@ -108,8 +108,5 @@ next: {
 | **Interaction Count** | 세션 내 사용자의 발화 건수를 뜻합니다. |
 | **Fallback Count** | 사용자의 발화 중 의도 분류에 실패한 건수를 뜻합니다. |
 | **Channel** | 어떤 채널에서 사용자의 대화가 진행되었는지를 뜻합니다. |
-
-<br/>
-
 
 
