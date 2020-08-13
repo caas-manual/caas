@@ -6,9 +6,9 @@ topnav:
     - title: Document
       url: /index.html
       folder: groupChatbot
-    - title: Tutorial
-      url: /basic_create_intent.html
-      folder: tutorial
+    # - title: Tutorial
+    #   url: /basic_create_intent.html
+    #   folder: tutorial
     #    - title: GitHub
 #      external_url: https://github.com/danbeeai/document
 #    - title: Pricing
