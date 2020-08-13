@@ -64,7 +64,8 @@ var date = new Date(); //오늘 날짜(Function이 실행된 순간)의 정보�
 var day = date.getDate(); //오늘 날짜의 일자를 얻음
 var month = date.getMonth() + 1; //오늘 날짜의 월을 얻음
 var year = date.getFullYear(); //오늘 날짜의 연도를 얻음.
-var hour = date.getHours(); //현재 시간을 얻음. 0~23시
+var hour = date.getHours(); //현재 시간을 얻음. 0~23시 단, 서버 시간 기준이므로 지역 시간과 다를 수 있음
+var utcHour = data.getUTCHour(); // UTC 기준 현재 시간. 0~23시
 ```
 
 위 코드를 활용하면 Function이 실행되는 날짜와 일정 날짜를 비교하여 특정 날짜 이후에는 답변을 바꾸는 등의 일을 할 수 있습니다. 혹은 시간을 활용하여, 다음과 같은 시나리오 구성이 가능합니다.
@@ -77,8 +78,13 @@ Case01 : 채팅 시간이 9시 이상 16시 이하일때 - 전화 연결 버튼 
 Case02 : 채팅 시간이 9시 이전, 16시 이후일때 전화 연결 불가 및 상담 가능 시간 안내.
 ```
 
-//IMAGE추가 - 실제 Chatflow 구성 및 simulator |
+{% include image.html file="chatflow/node_function/03_chatflow_function_example_01.png" max-width="900" caption="상담원 연결 예시 Chatflow" %}
 
-<!-- ## Function Node 활용하기
+**시간 확인 Function Node** 내부 내용은 아래와 같습니다.
 
-(예시) -->
+```javascript
+var date = new Date();
+현재시간 = date.getUTCHours() + 9;//한국시간 계산
+```
+
+{% include image.html file="chatflow/node_function/04_chatflow_function_example_02.png" max-width="900" caption="상담원 연결 예시 테스트" %}

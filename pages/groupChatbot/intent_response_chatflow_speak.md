@@ -29,7 +29,7 @@ next: {
 Speak Node는 답변을 추가할 수 있는 버튼이 존재하며 각 답변을 **Response Panel**이라고 명명합니다. Response Panel마다 Response Type을 결정할 수 있습니다. 가장 기본은 Basic으로 설정되어 있습니다. Popup 우측 상단 [Response 추가] 버튼을 클릭하면 새로운 Basic Type의 Response Panel이 추가됩니다.<br/>
 Speak Node에 구성하는 모든 Response Panel은 한 번에 반환되며 Response Panel 하나가 사용자가 받는 메시지 하나라고 생각하면 됩니다. 즉, Response Panel을 3개 추가했다면 사용자는 3개의 메시지로 구성된 답변을 한꺼번에 받게 됩니다.<br/>
 
-//IMAGE추가 - Response 1개 : simulator 메시지 1개 | Response 2개 : simulator 메시지 2개 확인
+{% include image.html file="chatflow/node_speak/02_chatflow_speak_node_basic_response.png" max-width="900" caption="Speak Node Response 1개(상) / 2개(하)" %}
 
 우측 상단 <button class="btn btn-default" disabled style="padding: 2px 5px 0px; margin: 0px; cursor: default;">{% include inline_image.html file="chatflow/icon/lg-chatflow-more.svg" width=15 %}</button> 버튼을 클릭하시면 Response Panel 끼리의 순서를 변경할 수 있습니다. 여러 개의 답변을 구성할 시에 답변은 Response Panel과 동일한 순서로 나갑니다.
 
@@ -46,17 +46,13 @@ Speak Node에서는 기본적으로 텍스트, 이미지, 버튼, 카드 컴포�
 
 **Basic Type**은 가장 기본적인 메시지 형태로 텍스트, 이미지, 버튼을 이용해 구성할 수 있습니다. 채널별 제약사항이 없다면 특정 요소 1개만 있어도 메시지를 구성할 수 있습니다.
 
-//IMAGE추가 - 텍스트, 이미지, 버튼 세팅 | 복합 구성 확인 simulator
+{% include image.html file="chatflow/node_speak/03_chatflow_speak_node_basic_response_complex.png" max-width="900" caption="Speak Node Response Type - Basic" %}
 
 ##### 텍스트 / 이미지 답변 만들기
 
-텍스트를 작성하고 이미지 영역에 이미지 URL을 입력하면 텍스트와 이미지로 만들어진 답변을 구성할 수 있습니다.
+가장 기본적인 답변 형태로, 텍스트를 작성하고 이미지 영역에 이미지 URL을 입력하면 텍스트와 이미지로 만들어진 답변을 구성할 수 있습니다. 텍스트만 작성하거나 이미지 URL만 넣을 수도 있습니다. 추가적으로 텍스트와 이미지 URL 입력 Table 최우측 최우측의 [+]버튼을 클릭하면 텍스트와 이미지 입력 행을 추가할 수 있습니다. 만약 하나의 Response Panel 내에 여러 행의 텍스트와 이미지 URL을 구성한다면 이 중 1개를 Random으로 골라 답변으로 내보냅니다. 이를 활용하면 단순히 같은 답변만 내뱉는 봇과의 대화에 비해 훨씬 자연스러운 대화를 만들 수 있습니다.
 
-//IMAGE추가 - 텍스트, 이미지 세팅 | simulator
-
-텍스트와 이미지 URL 입력 Table 최우측 최우측의 [+]버튼을 클릭하면 텍스트와 이미지 입력 행을 추가할 수 있습니다. 만약 하나의 Response Panel 내에 여러 행의 텍스트와 이미지 URL을 구성한다면 이 중 1개를 Random으로 골라 답변으로 내보냅니다. 이를 활용하면 단순히 같은 답변만 내뱉는 봇과의 대화에 비해 훨씬 자연스러운 대화를 만들 수 있습니다.
-
-//IMAGE추가 - 텍스트, 이미지 여러개 세팅 | random 답변 simulator
+{% include image.html file="chatflow/node_speak/04_chatflow_speak_node_basic_response_random.png" max-width="900" caption="Speak Node Response Type - Basic Random 답변 구성" %}
 
 ##### 버튼 만들기
 
@@ -85,21 +81,21 @@ Speak Node에서는 기본적으로 텍스트, 이미지, 버튼, 카드 컴포�
 
 #### Carousel
 
-**Carousel Type**을 선택하면 카드형의 답변을 구성할 수 있습니다. 카드 하나에 이미지 URL, 카드 Title, 추가 설명 영역인 Sub Title, 버튼을 구성할 수 있으며 우측 [카드 추가] 버튼을 클릭하면 카드를 추가할 수 있습니다. 카드 당 버튼 개수는 동일하게 구성됩니다.
+**Carousel Type**을 선택하면 카드형의 답변을 구성할 수 있습니다. 카드 하나에 이미지 URL, 카드 Title, 추가 설명 영역인 Sub Title, 버튼을 구성할 수 있으며 우측 [카드 추가] 버튼을 클릭하면 카드를 추가할 수 있습니다. 카드 당 버튼 개수는 동일하게 구성됩니다. 버튼을 제외한 모든 영역은 필수가 아닙니다.
 
-//IMAGE추가 - carousel 카드 | simulator
+{% include image.html file="chatflow/node_speak/05_chatflow_speak_node_basic_response_carousel.png" max-width="900" caption="Speak Node Response Type - Carousel" %}
 
 #### Custom Payload
 
 **Custom Payload Type**에는 채널에 의존적인 사용자 정의 정보를 담을 수 있습니다. 편의를 위하여 일반적으로 많이 사용하는 데이터 형태인 JSON, XML, HTML, Text 에디터를 사용할 수 있도록 지원하고 있습니다. Custom Payload는 사용자 정의 정보이므로, CAAS 내 Simulator에서는 정상적인 형태로 확인할 수 없습니다. 해당 정보가 정상적으로 도착했는 지 정도만 확인할 수 있습니다.
 
-//IMAGE추가 - Editor Mode select box open한채로 custom payload 캡처 | simulator 캡처
+{% include image.html file="chatflow/node_speak/06_chatflow_speak_node_basic_response_custom.png" max-width="900" caption="Speak Node Response Type - Custom" %}
 
 #### Quick Replies
 
 **Quick Reply**란, 답변 메시지 최하단 또는 입력창 상단에 작은 추가되어 빠르게 클릭할 수 있는 버튼입니다. 일반적으로 클릭하거나 다음 메시지가 오면 사라지기 때문에 정상적인 사용을 위해서는 무조건 제일 마지막에 위치해야 합니다. 그렇기 때문에 Speak Node 상세 Popup 내에서도 항상 제일 마지막 Response Panel 아래 붙어서 설정할 수 있습니다.
 
-//IMAGE추가 - QUICK 버튼 설정 | simulator
+{% include image.html file="chatflow/node_speak/07_chatflow_speak_node_basic_response_quick.png" max-width="900" caption="Speak Node Response - Quick Replies" %}
 
 ### UI컴포넌트 별 제약사항
 
@@ -133,11 +129,11 @@ Intent Parameter와 Chatflow Parameter 모두 `Value` 라는 영역을 확인할
 
 기본적으로 각종 입력란에 Parameter Value를 사용할 수 있습니다. 사용 용이성을 위해 Parameter를 사용할 수 있는 각종 입력란에 '$'를 입력하면 현재 사용 가능한 Parameter 목록을 확인할 수 있으며 추가하고자 하는 Parameter를 선택하면 자동으로 Parameter Value가 추가됩니다. $ 뒤에 추가로 키보드가 입력되면 해당 값으로 Parameter 목록을 필터링해서 보여줍니다. 
 
-//IMAGE추가 - $ 입력시 parmeter명 확인 | $ 추가로 키보드 입력시 필터링 |
+{% include image.html file="chatflow/node_speak/08_chatflow_speak_node_parameter_add.png" max-width="900" caption="Speak Node Response - Parameter 추가 Dropdown" %}
 
 이렇게 Parameter Value 형태로 입력하면 실제 사용자가 받는 답변은 해당 Parameter에 담긴 정보로 치환되어 보여지게 됩니다.
 
-//IMAGE추가 - Parameter 답변 치환 |
+{% include image.html file="chatflow/node_speak/09_chatflow_speak_node_parameter_value_change.png" max-width="900" caption="Speak Node Response - Parameter 치환" %}
 
 #### 동적 답변 만들기
 
@@ -148,7 +144,7 @@ Parameter를 활용하면 단순 텍스트를 동적으로 만들 수도 있지�
 
 1번의 경우 답변이 추가될 때마다 Speak Node를 새로 만들어야 합니다. 하지만 2번의 경우 최대 개수까지만 미리 만들어두면 하나의 Speak Node로도 여러 답변을 커버할 수 있습니다. 상황에 따라 Parameter에 정보가 존재하지 않을 경우 해당 컴포넌트는 최종적으로 사용자에게 보이지 않기 때문입니다.
 
-//IMAGE추가 - parameter 사용해서 버튼이나 카드 등을 동적으로 활용하는 거 보여주기 |
+{% include image.html file="chatflow/node_speak/10_chatflow_speak_node_dynamic_response.png" max-width="900" caption="Speak Node Response - 동적 답변 구성" %}
 
 ### Intent 호출에 활용하기
 
@@ -158,7 +154,7 @@ Parameter의 또다른 활용은 대화 흐름간 정보 전달입니다. Speak 
 
 Parameter 활용 방법에 앞서, **Intent 호출 버튼**에 대해 우선적으로 알아보겠습니다. 앞서 버튼 Type에서 설명했던 것처럼 Intent 호출 버튼은 직접적으로 내가 구성한 다른 Intent의 답변을 호출하는 버튼입니다. 명확하게 Intent를 선택하므로 원하지 않는 대화가 만들어질 확률을 대폭 낮출 수 있습니다. 일반적으로 답변에 대한 연관질문, 혹은 자주 묻는 질문 등을 보여줄 때 많이 사용합니다. 
 
-//IMAGE추가 - Intent 호출 버튼 구성 | Simulator
+{% include image.html file="chatflow/node_speak/11_chatflow_speak_node_callIntent_param_disable.png" max-width="900" caption="Speak Node Response - Intent 호출 버튼" %}
 
 이것을 버튼 클릭이 아닌 자연스러운 전달을 위해 Node로 만든 것이 <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin-left:5px; margin-right: 3px;"></i>[Jump Node](intent_response_chatflow_jump.html)</span>라고 생각하면 됩니다.
 
@@ -166,20 +162,19 @@ Parameter 활용 방법에 앞서, **Intent 호출 버튼**에 대해 우선적�
 
 버튼 Type으로 Intent 호출을 선택하고 연결할 Intent를 선택하면 [Parameter 연결] 버튼이 활성화 됩니다. Parameter 연결을 통하여 현재 대화에서 만들어진 정보를 전달할 수 있습니다. 
 
-//IMAGE추가 - Parameter 연결 버튼 활성화 |
+{% include image.html file="chatflow/node_speak/12_chatflow_speak_node_callIntent_select_intent.png" max-width="900" caption="Intent 호출 버튼 - Intent 선택 및 Parameter 연결 활성화" %}
 
 Parameter 연결 Popup에서 선택한 Intent의 모든 Parameter를 확인할 수 있습니다. 그리고 각 Parameter 마다 직접 값을 입력하거나 현재 Intent의 Parameter를 선택해서 전달할 정보를 구성할 수 있습니다.<br/>
 
 좀 더 쉬운 이해를 위해 예를 들어보겠습니다. 
 
-//IMAGE추가 - Parameter 연결 Popup (뭐먹지) |
+{% include image.html file="chatflow/node_speak/13_chatflow_speak_node_callIntent_param_connect.png" max-width="900" caption="Intent 호출 버튼 - Parameter 연결 Popup" %}
 
 해당 Chatflow는 무엇을 먹을지 추천해주고 만족하지 못하면 다시 추천해주는 흐름으로 구성되어 있습니다. 메뉴 추천을 다시 해줄까 물었을때, '메뉴 추천 다시' 버튼을 누르면 동일 Chatflow를 다시 실행합니다. 이때, 방금 추천한 메뉴를 제외하기 위해서 현재 추천된 메뉴, 즉 `menu` Parameter의 정보를 `originMenu`라는 Parameter에 담고자 하는 설정입니다.
 
-//IMAGE추가 - Parameter 연결 Simulator |
+{% include image.html file="chatflow/node_speak/14_chatflow_speak_node_callIntent_example.png" max-width="900" caption="Intent 호출 Parameter 연결 예시" %}
 
-//확인필요 - 이미지추가 후에 아래 설명 수정하기 |
-실제 대화를 살펴보면, '메뉴 추천 다시' 버튼을 눌렀을 때 이전에 추천했던 ~를 제외하고 다시 추천해주겠다는 메시지가 보입니다. Simulotor Debug 모드에서 자세한 Parameter 전달 결과값을 확인해보면 정상적으로 정보가 전달되었음을 확인할 수 있습니다. Debug 모드를 확인하는 방법은 <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin-left:5px; margin-right: 3px;"></i>[Simulator](test_simulator.html#debug-모드)</span> 페이지에서 확인해주세요.
+실제 대화를 살펴보면, '메뉴 추천 다시' 버튼을 눌렀을 때 이전에 추천했던 `오므라이스`를 제외하고 다시 추천해주겠다는 메시지가 보입니다. Simulotor Debug 모드에서 자세한 Parameter 전달 결과값을 확인해보면 정상적으로 정보가 전달되었음을 확인할 수 있습니다. Debug 모드를 확인하는 방법은 <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin-left:5px; margin-right: 3px;"></i>[Simulator](test_simulator.html#debug-모드)</span> 페이지에서 확인해주세요.
 
 
 

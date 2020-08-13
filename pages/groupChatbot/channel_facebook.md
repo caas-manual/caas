@@ -111,6 +111,9 @@ Facebook 채널과 연동을 마무리하려면 다시 Facebook for developer �
 ## 제약사항
 Facebook Messenger 챗봇 서비스를 이용하는데 있어 제약사항을 알려드립니다.
 아래 내용을 참고하시어 챗봇 Intent를 설계하시기 바랍니다.
+<br/>
+
+#### Speak Node
 
 | 답변유형 | 응답유형1 | 응답유형2 | 제약사항 |
 |--------|--------|--------|--------|
@@ -122,5 +125,11 @@ Facebook Messenger 챗봇 서비스를 이용하는데 있어 제약사항을 �
 |  |  | Quick reply | 최대 13개 |
 |  |  |  | Quick reply유형 Text, Intent 호출, 전화걸기만 지원 |
 |  |  |  | Text 20자 미만 |
-|  | Carousel | Card | 최대 10개 |
+|  | Carousel | Card | Card내 Title 필수(Title없을 시 해당 응답 지원하지 않음) |
+|  |  |  | 최대 10개 |
 |  | Custom | - | 지원안함 |
+
+
+#### Slot node
+
+Prompt Type이 Carousel인경우, Prompt는 지원하지 않음

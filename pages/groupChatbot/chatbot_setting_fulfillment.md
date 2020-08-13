@@ -11,8 +11,8 @@ previous: {
     url: chatbot_setting_conversation.html
 }
 next: {
-    title: Simulator,
-    url: test_simulator.html
+    title: Channel,
+    url: chatbot_setting_channel.html
 }
 ---
 

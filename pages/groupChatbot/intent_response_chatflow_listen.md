@@ -7,8 +7,8 @@ sidebar: chatbot_doc_sidebar
 permalink: intent_response_chatflow_listen.html
 folder: groupChatbot
 previous: {
-    title: Speak Node,
-    url: intent_response_chatflow_speak.html
+    title: Chatflow 기본,
+    url: intent_response_chatflow.html
 }
 next: {
     title: Slot Node,

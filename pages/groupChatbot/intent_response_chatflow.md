@@ -93,7 +93,7 @@ Parameter명을 정의할 때에는 다음과 같은 제약사항이 존재합�
 <br/>
 Chatflow Parameter 테이블 최우측, [+] 버튼을 누르면 등록할 Parameter를 추가할 수 있습니다.
 
-##### Chatflow System Parameter
+#### Chatflow System Parameter
 
 Intent 답변을 Chatflow로 구성할 때의 장점 중 하나는 Chatflow만이 파악 가능한 System Parameter를 사용할 수 있다는 것입니다. Chatflow System Parameter 종류는 다음과 같습니다.
 
@@ -101,7 +101,7 @@ Intent 답변을 Chatflow로 구성할 때의 장점 중 하나는 Chatflow만�
 |------------|--------|
 | **sys.message** | 사용자 발화문이 원형 그대로 담겨 있습니다. | 텍스트 |
 | **sys.chatbotName** | 현재 챗봇명이 담겨 있습니다. | 텍스트 |
-| **sys.channelName** | 사용자가 진입한 Channel명이 담겨 있습니다. | KAKAOTALK, FACEBOOK, DEFAULT 중 1<br/>(//확인필요-CG와) |
+| **sys.channelName** | 사용자가 진입한 Channel명이 담겨 있습니다. | KAKAOTALK, FACEBOOK, DEFAULT 중 1 |
 | **sys.sessionId** | 현재 대화 Session의 ID가 담겨 있습니다. | 텍스트 |
 | **sys.userId** | 현재 대화 중인 사용자의 ID가 담겨 있습니다. | 텍스트 |
 | **sys.languageCode** | 현재 대화 중인 사용자의 언어권이 담겨 있습니다. | ko, en 등 |
@@ -188,8 +188,6 @@ json 파일 정보는 다음과 같습니다.
 |------|-----|------|-----|
 | `nodeList` | `Array` | Y | 현재 그려진 전체 Node 목록과 세부 내용을 포함합니다. |
 | `parameterList` | `Array` | N | 현재 Chatflow에 등록된 모든 Parameter 정보를 포함합니다. |
-
-//확인필요 - 아래 상세 정보를 제공해줄지 여부 결정하기 |
 
 - nodeList
 

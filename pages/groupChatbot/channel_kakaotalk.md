@@ -12,7 +12,7 @@ previous: {
 }
 next: {
     title: Histroy,
-    url: history.html
+    url: manage_history.html
 }
 ---
 
@@ -102,7 +102,8 @@ next: {
 |  |  |  | 버튼유형 Text, Web Link, Intent 호출, 전화걸기만 지원 |
 |  |  | Quick reply | 최대 10개 |
 |  |  |  | Quick reply유형 Text, Web Link, Intent 호출, 전화걸기만 지원 |
-|  | Carousel | Card | 최대 10개 |
+|  | Carousel | Card | Card 내 ImageUrl 필수(ImageUrl없을 시 해당 카드 응답 지원 불가) |
+|  |  |  | 최대 10개 |
 |  | Custom | - | 지원안함 |
 
 <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin:0px 5px"></i>[기타 카카오 챗봇 응답 타입별 제약사항 확인하기](https://i.kakao.com/docs/skill-response-format#skillpayload)</span>

@@ -7,8 +7,8 @@ sidebar: chatbot_doc_sidebar
 permalink: manage_history.html
 folder: groupChatbot
 previous: {
-    title: Bulk Test, 
-    url: test_bulk.html
+    title: Kakaotalk, 
+    url: channel_kakaotalk.html
 }
 next: {
     title: Training,
