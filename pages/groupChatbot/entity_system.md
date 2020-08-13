@@ -27,15 +27,18 @@ next: {
 <!-- Intent 만들기에서 entity 매칭해주는 부분 -->
 
 Chatbot에서 제공하는 주요 시스템 Entity는 다음과 같습니다.<br/>
-- [날짜 Entity : sys.date]
-- [시간 Entity : sys.time]
-- [숫자 Entity : sys.number]
-- [이름 Entity : sys.person]
-- [언어 Entity : sys.language]
-- [일반 Entity : sys.any, sys.color, sys.url]
-<br/><br/>
 
-### 시스템 Entity 예시 - 날짜 Entity
+| 종류 | Entity 목록 | 
+|--------|-------|
+| 날짜/시간 | sys.date, sys.date-time, sys.time |
+| 숫자 | sys.number |
+| 이름 | sys.person |
+| 언어 | sys.language |
+| 일반 | sys.any, sys.color, sys.url |
+
+<br/>
+
+<!-- ### 시스템 Entity 예시 - 날짜 Entity
 
 | Entity | 대표어 | 
 |--------|-------|
@@ -43,4 +46,4 @@ Chatbot에서 제공하는 주요 시스템 Entity는 다음과 같습니다.<br
 
 **날짜 Entity**는 날짜를 가리키는 단어를 구분합니다. 일, 월, 년에 대해 각각의 시스템 Entity를 제공합니다. <br/>
 
-Intent에 날짜 Entity 타입의 Parameter를 추가하고 날짜 지칭 단어가 들어가는 문장을 입력하면 단어가 숫자값으로 변환되어 들어오는 것을 확인할 수 있습니다. '오늘', '당월', '올해'를 0으로 잡고 기준으로 부터 떨어진 날짜수를 계산하여 반환하게 됩니다.  
+Intent에 날짜 Entity 타입의 Parameter를 추가하고 날짜 지칭 단어가 들어가는 문장을 입력하면 단어가 숫자값으로 변환되어 들어오는 것을 확인할 수 있습니다. '오늘', '당월', '올해'를 0으로 잡고 기준으로 부터 떨어진 날짜수를 계산하여 반환하게 됩니다.   -->
