@@ -68,7 +68,7 @@ Dashboard 페이지에서는 아래와 같은 조건으로 조회가 가능합�
 <br/>
 **기준일자**는 해당 기간 데이터가 업데이트 된 일시를 뜻하며 Chatbot 개발자 PC의 시간대(Timezone) 기준으로 보여집니다. <br/>
 
-{% include image.html file="manage/dashboard_tnx_basic.png" max-width="900" caption="Dashboard 처리량" %}
+{% include image.html file="manage/dashboard_tnx_basic.png" max-width="900" caption="Dashboard 처리량 기준일자" %}
 
 #### 누적 세션
 
@@ -82,7 +82,7 @@ Dashboard 페이지에서는 아래와 같은 조건으로 조회가 가능합�
 
 **세션당 평균 처리량** 값은 누적 처리량을 누적 세션으로 나눈 값을 뜻합니다. <br/> 
 
-{% include image.html file="manage/dashboard_tnx_stats.PNG" max-width="900" caption="Dashboard 처리량" %}
+{% include image.html file="manage/dashboard_tnx_stats.PNG" max-width="900" caption="Dashboard 누적 세션 / 누적 처리량 / 세션당 평균 처리량" %}
 
 #### 세션
 
@@ -121,7 +121,7 @@ Dashboard 페이지에서는 아래와 같은 조건으로 조회가 가능합�
 <br/>
 **기준일자**는 해당 기간 데이터가 업데이트 된 일시를 뜻하며 Chatbot 개발자가 설정한 시간대(Timezone) 기준으로 보여집니다. <br/>
 
-{% include image.html file="manage/dashboard_response_basic.png" max-width="900" caption="응답률 기준일자" %}
+{% include image.html file="manage/dashboard_response_basic.png" max-width="900" caption="Dashboard 응답률 기준일자" %}
 
 #### 평균 응답률
 
@@ -131,13 +131,13 @@ Dashboard 페이지에서는 아래와 같은 조건으로 조회가 가능합�
 
 **평균 추론율**은 추론율의 평균값 입니다. 추론율(Confidence)이란 챗봇이 어떠한 확률로 발화를 해당 의도로 분류했는 지를 뜻합니다. <br/>
 
-{% include image.html file="manage/dashboard_response_avg.PNG" max-width="900" caption="평균 응답률 / 추론율" %}
+{% include image.html file="manage/dashboard_response_avg.PNG" max-width="900" caption="Dashboard 평균 응답률 / 평균 추론율" %}
 
 #### 응답률
 
 **응답률** 항목에서는 조회 기간에서 선택한 시간별/일별/월별 기준으로 응답률 추이를 그래프를 보여줍니다.
 
-{% include image.html file="manage/dashboard_response_graph.PNG" max-width="900" caption="응답률 그래프" %}
+{% include image.html file="manage/dashboard_response_graph.PNG" max-width="900" caption="Dashboard 응답률 그래프" %}
 
 {% include note.html content="각 그래프 위에 마우스를 가져다 대면 해당 시점의 응답률을 확인할 수 있습니다." %}
 
@@ -146,6 +146,6 @@ Dashboard 페이지에서는 아래와 같은 조건으로 조회가 가능합�
 **Intent 추론율 Best/Worst** 항목에서는 조회 기간동안 Intent별 평균 추론율 순위 및 추이를 그래프를 보여줍니다. 상/하위 10개의 Intent에 대한 추론을 확인할 수 있습니다.
 그래프는 조회 기간에서 선택한 시간별/일별/월별 기준으로 변화량을 확인할 수 있습니다. <br/>
 
-{% include image.html file="manage/dashboard_intent_confidence.png" max-width="900" caption="추론율 그래프" %}
+{% include image.html file="manage/dashboard_intent_confidence.png" max-width="900" caption="Dashboard 추론율 그래프" %}
 
 {% include note.html content="각 그래프 위에 마우스를 가져다 대면 챗봇명 및 Intent명과 해당 시점의 추론율을 확인할 수 있습니다." %}

@@ -24,7 +24,7 @@ next: {
 
 <br/>History 페이지에서는 아래와 같은 조건으로 조회가 가능합니다.<br/>
 
-{% include image.html file="manage/history_filtering.jpg" max-width="900" caption="조회 조건" %}
+{% include image.html file="manage/history_filtering.JPG" max-width="900" caption="조회 조건" %}
 
  - 조회기간
  - 시작 Intent명
@@ -64,7 +64,7 @@ next: {
 #### 요약 정보
 
 **History** 페이지에서 대화 이력 조회시 세션별 대화 요약 정보가 조회됩니다.
-{% include image.html file="manage/history_summary.jpg" max-width="900" caption="대화 이력 요약" %}
+{% include image.html file="manage/history_summary.JPG" max-width="900" caption="대화 이력 요약" %}
 
 요약 정보에서 확인할 수 내용들은 아래와 같습니다. <br/> 
  
@@ -80,7 +80,7 @@ next: {
 #### 상세 정보
 대화 상세 내역을 조회하고자 하는 행을 클릭하면 해당 세션에 대한 대화 상세 내역을 조회할 수 있습니다.<br/>
 
-{% include image.html file="manage/history_detail.jpg" max-width="900" caption="대화 이력 상세" %}
+{% include image.html file="manage/history_detail.JPG" max-width="900" caption="대화 이력 상세" %}
 
 상세 정보에서 확인할 수 있는 내용들은 아래와 같습니다. <br/>
 
