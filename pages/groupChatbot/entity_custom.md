@@ -97,7 +97,7 @@ Entity의 종류는 상세 화면의 체크박스들의 체크 유무에 따라 
 - 상세 화면의 체크박스에서 정규 표현식 옵션을 선택 해제하고 유의어 정의 옵션을 선택 해제합니다.
 <br/><br/>
 
-### 복합 Entity
+#### 복합 Entity
 복합 Entity은 특별한 종류의 리스트 Entity 입니다. 리스트 Entity의 Entry에 다른 Entity가 참조되어 포함된 형태로 이를 복합 Entity라 합니다.
 <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin:0px 5px"></i>[복합 Entity란?](https://cloud.google.com/dialogflow/docs/entities-options#comp)</span>
 
