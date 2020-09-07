@@ -22,7 +22,6 @@ next: {
 Conversation 탭에서는 Chatbot과 대화할 때 필요한 다음과 같은 내용을 설정할 수 있습니다.<br/>
  - [Classification Threshold](chatbot_setting_conversation.html#classification-threshold)
  - [감정분석](chatbot_setting_conversation.html#감정분석)
- - [이전 대화 복귀 설정](chatbot_setting_conversation.html#이전-대화-복귀-설정)
 
 
 ### Classification Threshold
@@ -39,6 +38,3 @@ Classification Threshold는 대화를 분류하는 임계값입니다. 0에서 1
 {% include note.html content="감정분석 중립 구간은 Chatbot 생성 시 기본 -0.2 ~ 0.2로 저장됩니다." %}
 
 {% include image.html file="chatbot_info\16_chatbot_info_conversation_sentiment.png" max-width="900" caption="감정 분석 설정" %}
-
-### 이전 대화 복귀 설정
- 기능 삭제될 수 있음
