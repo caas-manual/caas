@@ -137,7 +137,7 @@ Intent 페이지 중간 'Parameters' 영역 우측 [Parameter추가] 버튼 누�
 **List**는 값이 List로 반환되어야 하는 경우 이 체크박스를 선택하세요. 만약, 동일 parameter가 한 문장에 여러개가 매핑될 경우, 자동으로 List가 체크됩니다.
 {% include image.html file="intent/intent_basic_parameter_7.png" max-width="900" caption="Parameter List 체크" %}
 
-**Prompt**는 Intent Type이 Dialogflow형 일 경우에만 나타납니다. Prompt는 매개변수가 제공되지 않은 경우 에이전트가 최종 사용자에게 묻는질문입니다. 이 필드는 **필수** 필드가 선택된 경우에만 사용됩니다. 
+**Prompt**는 Intent Type이 Dialogflow형 일 경우에만 나타납니다. Prompt는 매개변수가 제공되지 않은 경우 Chatbot이 최종 사용자에게 묻는질문입니다. 이 필드는 **필수** 필드가 선택된 경우에만 사용됩니다. 
 {% include image.html file="intent/intent_basic_parameter_8.png" max-width="900" caption="Parameter 필수 체크시 Prompt 설정" %}
 {% include image.html file="intent/intent_basic_parameter_9.png" max-width="900" caption="Prompt 설정 팝업" %}
 
