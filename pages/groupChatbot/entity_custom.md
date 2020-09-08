@@ -144,10 +144,10 @@ Entity의 종류는 상세 화면의 체크박스들의 체크 유무에 따라 
 
 {% include note.html content="Chatbot에서 Entity 유형을 확장할 수 있도록 학습 문구에 많은 Entity 값 예시를 제공해야 합니다. 그렇지 않으면 **자동 확장이 예상대로 작동하지 않을 수 있습니다.**" %}
 
-{% include image.html file="entity/01_entity_custom_map_auto.PNG" max-width="900" caption="자동 확장 설정" %}
-
 자동 확장을 사용 설정하려면 다음 안내를 따르세요.<br/>
 - 상세 화면의 체크박스에서 자동 확장 옵션을 선택합니다.
+
+{% include image.html file="entity/01_entity_custom_map_auto.PNG" max-width="900" caption="자동 확장 설정" %}
 
 
 ### 퍼지 매칭
