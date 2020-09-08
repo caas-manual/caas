@@ -50,21 +50,21 @@ Event를 입력하면 아래 화면과 같이 태그 형태로 입력되며, Eve
 
 #### 예문에서 정보 추출
 
-{% include note.html content="본 내용은 [엔티티 관리](entity.html) 페이지를 확인하신 후 다시 본다면 이해도를 높일 수 있습니다." %}
+{% include note.html content="본 내용은 [Entity 이해하기](entity_basic.html) 페이지를 확인하신 후 다시 본다면 이해도를 높일 수 있습니다." %}
 
-입력 문장에서 특정 정보를 얻고자 할 때에는 등록한 예문에 [Parameter](intent.html#parameter)를 추가할 수 있습니다. 즉, 지정한 부분에 적힌 정보를 변수에 담아서 사용할 수 있게 됩니다. 예를 들어 '간식 먹을래?'라는 문장을 입력받았을 때 ***'간식'***이라는 부분에 다양한 음식 종류를 받고 사용하고 싶은 경우 해당 기능을 활용할 수 있습니다.<br/>
+입력 문장에서 특정 정보를 얻고자 할 때에는 등록한 예문에 [Parameter](intent_basic.html#parameter)를 추가할 수 있습니다. 즉, 지정한 부분에 적힌 정보를 변수에 담아서 사용할 수 있게 됩니다. 예를 들어 '간식 먹을래?'라는 문장을 입력받았을 때 ***'간식'***이라는 부분에 다양한 음식 종류를 받고 사용하고 싶은 경우 해당 기능을 활용할 수 있습니다.<br/>
 
 지금부터 어떻게 예문에서 정보를 추출할 수 있는지 알아보겠습니다.
 
 {% include image.html file="intent/intent_basic_parameter_add1.png" max-width="900" caption="예문에 Parameter 추가 01" %}
 
-먼저, 입력한 예문에서 추출하고 싶은 영역을 *드래그* 하면 위 그림과 같이 Entity를 선택할 수 있는 창이 뜹니다. <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin:0px 5px"></i>[Entity](entity.html)</span>에 관한 자세한 내용은 다음 페이지에서 계속됩니다.
+먼저, 입력한 예문에서 추출하고 싶은 영역을 *드래그* 하면 위 그림과 같이 Entity를 선택할 수 있는 창이 뜹니다. <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin:0px 5px"></i>[Entity](entity_basic.html)</span>에 관한 자세한 내용은 Entities 메뉴에서 확인할 수 있습니다.
 
 {% include image.html file="intent/intent_basic_parameter_add2.png" max-width="900" caption="예문에 Parameter 추가 02" %}
 
-특정 Entity를 선택하면 창은 닫히고 예문 아래 Parameter가 추가됩니다. Intent를 저장하면 Parameter를 지정한 영역의 색이 바뀌는 것을 확인할 수 있습니다.<br/>
+특정 Entity를 선택하면 창은 닫히고 예문 아래 Parameter가 추가됩니다. Parameter를 지정한 영역의 색이 바뀌는 것을 확인할 수 있습니다.<br/>
 
-이렇게 예문을 등록했을때 어떻게 정보가 추출되는지 확인하고 싶다면 우측에 있는 <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin: 0px 5px"></i>[테스트 패널](demo_n_test_panel.html#테스트-패널)</span>을 활용할 수 있습니다. NLU Intent 테스트 패널에 등록한 예문과 동일한 패턴의 문장을 입력합니다.
+이렇게 예문을 등록했을때 어떻게 정보가 추출되는지 확인하고 싶다면 우측에 있는 <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin: 0px 5px"></i>[Simulator](test_simulator.html)</span>를 활용할 수 있습니다. Simulator에서 입력한 문장의 답변을 클릭하면 상세한 Intent 분석 정보를 확인할 수 있습니다.
 
 {% include image.html file="intent/intent_basic_nlutest.png" max-width="900" caption="문장에서 추출되는 정보 확인" %}
 
@@ -91,7 +91,7 @@ Event를 입력하면 아래 화면과 같이 태그 형태로 입력되며, Eve
 **Parameter(파라미터)**란 사용자와의 대화에서 뽑아내는 정보를 담아내는 껍데기입니다. 일종의 변수와도 같은 개념으로 대화흐름 속에서 특정 값을 전달하기위해 사용됩니다. Parameter에는 2가지 필수 정보가 존재합니다. **Parameter 명**과 **Entity** 입니다. Parameter 명은 변수 명, Entity는 변수 타입과 같은 종류로 볼 수 있습니다.<br/> 
 Parameter 등록 방법으로는 크게 2가지가 있습니다.
 
-- [예문에 직접 지정](intent.html#예문에서-정보-추출)
+- [예문에 직접 지정](intent_basic.html#예문에서-정보-추출)
 - Intent 내에서 추가
 
 첫 번째 경우는 앞서 사용자 입력 예문에서 설명한 것과 같습니다.<br/> 
