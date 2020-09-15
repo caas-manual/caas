@@ -52,10 +52,8 @@ API 등록 요청 화면 입니다.
 &nbsp;&nbsp;&nbsp;&nbsp; API URL에서 요구하는 파라미터를 추가하려면 테이블 우측의 '+' 버튼을 클릭하여 추가합니다.<br/>
 - ⑧ API 호출 후 사용 되는 값을 성정 하는 Body 부분 입니다. <br/>
 &nbsp;&nbsp;&nbsp;&nbsp; API 메서드가 POST일 경우만 셋팅 가능 하며 추가하려면 테이블 우측의 '+' 버튼을 클릭하여 추가 하거나, Editor로 직접 입력 선택 후 JSON 형식으로 텍스트를 추가합니다.<br/>
-<br/>
-날씨 API 등록의 예시 화면 입니다.
+
 {% include image.html file="api/00_api_basic_example_weatherAPI.png" max-width="900" caption="API 등록 화면 예시 - 날씨 API" %}
-<br/>
  
 #### API 메서드 / Request URL
 메서드는 클라이언트와 Chatbot 서버 사이에 이루어지는 요청(Request)과 응답(Response) 데이터를 전송하는 방식입니다. 
