@@ -54,7 +54,7 @@ API 등록 요청 화면 입니다.
 &nbsp;&nbsp;&nbsp;&nbsp; API 메서드가 POST일 경우만 셋팅 가능 하며 추가하려면 테이블 우측의 '+' 버튼을 클릭하여 추가 하거나, Editor로 직접 입력 선택 후 JSON 형식으로 텍스트를 추가합니다.<br/>
 <br/>
 날씨 API 등록의 예시 화면 입니다.
-{% include image.html file="api/00_api_basic_example_weatherAPI.PNG" max-width="900" caption="API 등록 화면 예시 - 날씨 API" %}
+{% include image.html file="api/00_api_basic_example_weatherAPI.png" max-width="900" caption="API 등록 화면 예시 - 날씨 API" %}
 <br/>
  
 #### API 메서드 / Request URL
