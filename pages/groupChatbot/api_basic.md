@@ -113,7 +113,7 @@ API 상세화면의 우측 하단에 **취소**  버튼이 존재합니다.  **�
 
 
 ## API 등록 예시
-실제 API의 등록하고 사용하기 위해서는 사용하고자 하는 API의 사이트에서 API key 발급 및 파라미터들을 확인해야 합니다.<br/>
+실제 API를 등록하고 사용하기 위해서는 사용하고자 하는 API의 사이트에서 API key 발급 및 파라미터들을 확인해야 합니다.<br/>
 예시로 보이는 API는 날씨 오픈 API이며 <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin:0px 5px"></i>[여기에서](https://openweathermap.org/)</span> 확인 가능합니다.<br/>
 
 {% include image.html file="api/00_api_basic_example_weatherAPI_1.png" max-width="900" caption="오픈 API 목록" %}<br/>
