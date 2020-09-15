@@ -131,5 +131,7 @@ Facebook Messenger 챗봇 서비스를 이용하는데 있어 제약사항을 �
 
 
 #### Slot node
+위와 동일
+단 Prompt Type이 Carousel인경우, Prompt는 지원하지 않음
 
-Prompt Type이 Carousel인경우, Prompt는 지원하지 않음
+<span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin:0px 5px"></i>[기타 페이스북 메신저 응답 타입별 제약사항 확인하기](https://developers.facebook.com/docs/messenger-platform/reference/templates)</span>
