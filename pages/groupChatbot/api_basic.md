@@ -53,6 +53,7 @@ API 등록 요청 화면 입니다.
 - ⑧ API 호출 후 사용 되는 값을 성정 하는 Body 부분 입니다. <br/>
 &nbsp;&nbsp;&nbsp;&nbsp; API 메서드가 POST일 경우만 셋팅 가능 하며 추가하려면 테이블 우측의 '+' 버튼을 클릭하여 추가 하거나, Editor로 직접 입력 선택 후 JSON 형식으로 텍스트를 추가합니다.<br/>
 
+{% include image.html file="api/00_api_basic_example_weatherAPI.png" max-width="900" caption="API 등록 화면 예시 - 날씨 API" %}
  
 #### API 메서드 / Request URL
 메서드는 클라이언트와 Chatbot 서버 사이에 이루어지는 요청(Request)과 응답(Response) 데이터를 전송하는 방식입니다. 
@@ -102,7 +103,7 @@ parameter 입력 후, 화면 제일 하단의 **테스트** 버튼을 클릭해,
 실행 성공시, Response API에서 JSON 형태의 데이터가 조회됩니다.<br/>
 API 적용 결과 조회된 데이터를 JSON형태로 조회해서 보여줍니다. 실패시 디버그 메세지 또는 아무런 데이터가 조회되지 않습니다.
 <!-- API 테스트 결과 화면(JSON) -->
-{% include image.html file="api/08_api_basic_response_json.PNG" max-width="900" caption="Response API 예시" %}
+{% include image.html file="api/08_api_basic_response_json_2.PNG" max-width="900" caption="Response API 예시" %}
   
 #### 저장
 API 정보 정상 입력 후 **저장** 버튼을 클릭해, API 등록 정보를 저장합니다. 

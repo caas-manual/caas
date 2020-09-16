@@ -15,7 +15,6 @@ next: {
     url: channel_facebook.html
 }
 ---
-
 ## Native App(API)
 채널에서 챗봇 서비스와 연계하기 위해 제공되는 API들과 각 이벤트시에 처리되고 활용되는 데이터 항목에 대해 설명합니다.
 

@@ -40,6 +40,15 @@ Event를 입력하면 아래 화면과 같이 태그 형태로 입력되며, Eve
 
 {% include image.html file="intent/intent_basic_events.png" max-width="900" caption="Events 추가" %}
 
+Event는 fulfillment 또는 API를 사용하여 호출할 수 있습니다. 예를 들어 특정 시간에 Event를 호출하는 시간 알림을 대화 중에 설정할 수 있습니다. 이 Event는 최종 사용자에게 무언가를 알리는 Intent를 트리거할 수 있습니다.
+
+Sessions 유형 detectIntent 호출의 요청에는 이벤트를 호출하는 데 사용되는 queryInput.event 필드가 있습니다. 이 필드의 유형은 EventInput이며, 이벤트 이름, 선택적 매개변수, 언어 코드 필드가 포함됩니다.
+
+detectIntent 호출에 Event를 제공할 때는 최종 사용자 표현과 같은 다른 데이터를 제공하지 않습니다. 이 호출의 유일한 목적은 Event를 호출하고 Intent를 트리거하는 것입니다.
+
+{% include note.html content="본 내용은 [Native App(API)](channel_native_app.html) 페이지를 확인하신 후 다시 본다면 이해도를 높일 수 있습니다." %}
+
+
 ### Training Phrases
 
 **Training Phrases(사용자 입력 예문)**은 입력 문장 중 해당 Intent로 구분되길 원하는 문장을 의미합니다. 챗봇은 입력 문장과 동일하거나 가장 비슷한 예문을 가지고 있는 Intent를 찾게 됩니다. 예를 들어 사용자가 '안녕'이라는 말을 했을 때 봇이 '인사'로 알아듣길 원한다면 '인사' Intent에 '안녕'이라는 사용자 입력 예문을 추가하시면 됩니다.<br/>
@@ -50,21 +59,21 @@ Event를 입력하면 아래 화면과 같이 태그 형태로 입력되며, Eve
 
 #### 예문에서 정보 추출
 
-{% include note.html content="본 내용은 [엔티티 관리](entity.html) 페이지를 확인하신 후 다시 본다면 이해도를 높일 수 있습니다." %}
+{% include note.html content="본 내용은 [Entity 이해하기](entity_basic.html) 페이지를 확인하신 후 다시 본다면 이해도를 높일 수 있습니다." %}
 
-입력 문장에서 특정 정보를 얻고자 할 때에는 등록한 예문에 [Parameter](intent.html#parameter)를 추가할 수 있습니다. 즉, 지정한 부분에 적힌 정보를 변수에 담아서 사용할 수 있게 됩니다. 예를 들어 '간식 먹을래?'라는 문장을 입력받았을 때 ***'간식'***이라는 부분에 다양한 음식 종류를 받고 사용하고 싶은 경우 해당 기능을 활용할 수 있습니다.<br/>
+입력 문장에서 특정 정보를 얻고자 할 때에는 등록한 예문에 [Parameter](intent_basic.html#parameter)를 추가할 수 있습니다. 즉, 지정한 부분에 적힌 정보를 변수에 담아서 사용할 수 있게 됩니다. 예를 들어 '간식 먹을래?'라는 문장을 입력받았을 때 ***'간식'***이라는 부분에 다양한 음식 종류를 받고 사용하고 싶은 경우 해당 기능을 활용할 수 있습니다.<br/>
 
 지금부터 어떻게 예문에서 정보를 추출할 수 있는지 알아보겠습니다.
 
 {% include image.html file="intent/intent_basic_parameter_add1.png" max-width="900" caption="예문에 Parameter 추가 01" %}
 
-먼저, 입력한 예문에서 추출하고 싶은 영역을 *드래그* 하면 위 그림과 같이 Entity를 선택할 수 있는 창이 뜹니다. <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin:0px 5px"></i>[Entity](entity.html)</span>에 관한 자세한 내용은 다음 페이지에서 계속됩니다.
+먼저, 입력한 예문에서 추출하고 싶은 영역을 *드래그* 하면 위 그림과 같이 Entity를 선택할 수 있는 창이 뜹니다. <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin:0px 5px"></i>[Entity](entity_basic.html)</span>에 관한 자세한 내용은 Entities 메뉴에서 확인할 수 있습니다.
 
 {% include image.html file="intent/intent_basic_parameter_add2.png" max-width="900" caption="예문에 Parameter 추가 02" %}
 
-특정 Entity를 선택하면 창은 닫히고 예문 아래 Parameter가 추가됩니다. Intent를 저장하면 Parameter를 지정한 영역의 색이 바뀌는 것을 확인할 수 있습니다.<br/>
+특정 Entity를 선택하면 창은 닫히고 예문 아래 Parameter가 추가됩니다. Parameter를 지정한 영역의 색이 바뀌는 것을 확인할 수 있습니다.<br/>
 
-이렇게 예문을 등록했을때 어떻게 정보가 추출되는지 확인하고 싶다면 우측에 있는 <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin: 0px 5px"></i>[테스트 패널](demo_n_test_panel.html#테스트-패널)</span>을 활용할 수 있습니다. NLU Intent 테스트 패널에 등록한 예문과 동일한 패턴의 문장을 입력합니다.
+이렇게 예문을 등록했을때 어떻게 정보가 추출되는지 확인하고 싶다면 우측에 있는 <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin: 0px 5px"></i>[Simulator](test_simulator.html)</span>를 활용할 수 있습니다. Simulator에서 입력한 문장의 답변을 클릭하면 상세한 Intent 분석 정보를 확인할 수 있습니다.
 
 {% include image.html file="intent/intent_basic_nlutest.png" max-width="900" caption="문장에서 추출되는 정보 확인" %}
 
@@ -91,7 +100,7 @@ Event를 입력하면 아래 화면과 같이 태그 형태로 입력되며, Eve
 **Parameter(파라미터)**란 사용자와의 대화에서 뽑아내는 정보를 담아내는 껍데기입니다. 일종의 변수와도 같은 개념으로 대화흐름 속에서 특정 값을 전달하기위해 사용됩니다. Parameter에는 2가지 필수 정보가 존재합니다. **Parameter 명**과 **Entity** 입니다. Parameter 명은 변수 명, Entity는 변수 타입과 같은 종류로 볼 수 있습니다.<br/> 
 Parameter 등록 방법으로는 크게 2가지가 있습니다.
 
-- [예문에 직접 지정](intent.html#예문에서-정보-추출)
+- [예문에 직접 지정](intent_basic.html#예문에서-정보-추출)
 - Intent 내에서 추가
 
 첫 번째 경우는 앞서 사용자 입력 예문에서 설명한 것과 같습니다.<br/> 
@@ -137,7 +146,7 @@ Intent 페이지 중간 'Parameters' 영역 우측 [Parameter추가] 버튼 누�
 **List**는 값이 List로 반환되어야 하는 경우 이 체크박스를 선택하세요. 만약, 동일 parameter가 한 문장에 여러개가 매핑될 경우, 자동으로 List가 체크됩니다.
 {% include image.html file="intent/intent_basic_parameter_7.png" max-width="900" caption="Parameter List 체크" %}
 
-**Prompt**는 Intent Type이 Dialogflow형 일 경우에만 나타납니다. Prompt는 매개변수가 제공되지 않은 경우 에이전트가 최종 사용자에게 묻는질문입니다. 이 필드는 **필수** 필드가 선택된 경우에만 사용됩니다. 
+**Prompt**는 Intent Type이 Dialogflow형 일 경우에만 나타납니다. Prompt는 매개변수가 제공되지 않은 경우 Chatbot이 최종 사용자에게 묻는질문입니다. 이 필드는 **필수** 필드가 선택된 경우에만 사용됩니다. 
 {% include image.html file="intent/intent_basic_parameter_8.png" max-width="900" caption="Parameter 필수 체크시 Prompt 설정" %}
 {% include image.html file="intent/intent_basic_parameter_9.png" max-width="900" caption="Prompt 설정 팝업" %}
 

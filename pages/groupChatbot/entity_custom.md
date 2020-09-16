@@ -49,14 +49,14 @@ next: {
 
 Entity 등록/수정에는 다음과 같은 제약사항이 존재합니다.
 
-- Entity명은 Agent(에이전트)마다 고유합니다. Entity명은 문자로 시작해야 하며 A-Z, a-z, 0-9, _(밑줄), -(대시)를 포함할 수 있습니다.
+- Entity명은 Chatbot마다 고유합니다. Entity명은 문자로 시작해야 하며 영문 대소문자, 0-9, _(밑줄), -(대시)를 포함할 수 있습니다.
 - Entity명은 최대 30자로 제한합니다.
 - Entity는 반드시 하나 이상의 Entry를 가져야 합니다.
 - Value는 최대 512자로 제한합니다. 
 - Entry는 반드시 하나 이상의 Synonym를 가져야 합니다.
 - 하나의 Entry에 Synonym는 최대 200개까지 등록이 가능합니다.
 - 퍼지 매칭은 정규 표현식 Entity에 사용 설정할 수 없습니다. 이러한 기능은 상호 배타적입니다.
-- 각 Agent에는 최대 50개의 정규 표현식 Entity가 있을 수 있습니다.
+- 각 Chatbot에는 최대 50개의 정규 표현식 Entity가 있을 수 있습니다.
 - Entity에 대한 정규 표현식의 길이는 한 Entity 내의 모든 Entry가 가진 정규 표현식의 길이를 합하여 최대 1024자입니다.
 <br/>
 
@@ -120,14 +120,14 @@ Entity의 종류는 상세 화면의 체크박스들의 체크 유무에 따라 
 정규 표현식 Entity를 만들려면 다음 안내를 따르세요.<br/>
 - 상세 화면의 체크박스에서 정규 표현식 옵션을 선택합니다.
 - 퍼지 매칭 옵션은 정규 표현식 Entity에 설정할 수 없습니다. 이러한 기능은 상호 배타적입니다.
-- 각 Agent(에이전트)에는 최대 50개의 정규 표현식 Entity가 있을 수 있습니다.
-- Agent 학습 중에는 단일 개체의 모든 정규 표현식이 대체 연산자(|)와 결합되어 하나의 복합 정규 표현식을 형성합니다. <br/>
+- 각 Chatbot에는 최대 50개의 정규 표현식 Entity가 있을 수 있습니다.
+- Chatbot 학습 중에는 단일 개체의 모든 정규 표현식이 대체 연산자(|)와 결합되어 하나의 복합 정규 표현식을 형성합니다. <br/>
   Entry를 추가할 때마다 대체 연산자(|)가 생기는 것으로 1자씩 추가됨으로 간주하여 최대 길이를 계산할 수 있습니다.
 - 복합 정규 표현식 최대 길이는 1024자입니다.
 
 ### 자동 확장
 
-자동 확장을 사용 설정하면 Agent에서 명시적으로 제공되지 않은 값을 인식할 수 있습니다. 자세한 내용은 오른쪽 링크를 참조해주세요.
+자동 확장을 사용 설정하면 Chatbot에서 명시적으로 제공되지 않은 값을 인식할 수 있습니다. 자세한 내용은 오른쪽 링크를 참조해주세요.
 <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin:0px 5px"></i>[자동 확장이란?](https://cloud.google.com/dialogflow/docs/entities-options#expansion)</span>
 
 예를 들어 다음과 같은 쇼핑 목록 항목 유형이 있다고 가정해 보겠습니다.
@@ -138,14 +138,16 @@ Entity의 종류는 상세 화면의 체크박스들의 체크 유무에 따라 
 | butter | butter |
 | milk | milk |
 | apple	| apple |
-| ice cream	|아이스크림|
+| ice cream	| ice cream |
 
-최종 사용자 표현이 'I need to buy some carrots'라면 제공되지 않더라도 'carrots'가 이 항목 유형에 일치합니다. 에이전트는 'carrots'가 다른 값과 비슷함을 인식합니다. Agent가 Entity 유형을 확장할 수 있도록 학습 문구에 많은 Entity 값 예시를 제공해야 합니다. 그렇지 않으면 자동 확장이 예상대로 작동하지 않을 수 있습니다.<br/>
+최종 사용자 표현이 'I need to buy some carrots'라면 제공되지 않더라도 'carrots'은 이 항목 유형에 일치합니다. Chatbot이 'carrots'가 다른 값과 비슷함을 인식한 것입니다.
 
-{% include image.html file="entity/01_entity_custom_map_auto.PNG" max-width="900" caption="자동 확장 설정" %}
+{% include note.html content="Chatbot에서 Entity 유형을 확장할 수 있도록 학습 문구에 많은 Entity 값 예시를 제공해야 합니다. 그렇지 않으면 **자동 확장이 예상대로 작동하지 않을 수 있습니다.**" %}
 
 자동 확장을 사용 설정하려면 다음 안내를 따르세요.<br/>
 - 상세 화면의 체크박스에서 자동 확장 옵션을 선택합니다.
+
+{% include image.html file="entity/01_entity_custom_map_auto.PNG" max-width="900" caption="자동 확장 설정" %}
 
 
 ### 퍼지 매칭
