@@ -112,7 +112,7 @@ Chatbot을 빌드할 때 각 Intent에 대한 응답 데이터를 제공해야 �
 
 Fulfillment가 사용 설정된 Intent가 일치되는 경우 Dialogflow는 일치된 Intent에 대한 정보와 함께 Webhook 서비스에 요청을 보냅니다. 시스템은 필요한 작업을 수행하고 진행 방법에 대한 정보를 포함한 응답을 Dialogflow에 제공할 수 있습니다. 
 
- ##### fulfillment 흐름
+ **fulfillment 흐름**
  - 최종 사용자가 표현을 입력하거나 말합니다.
  - Dialogflow가 최종 사용자 표현을 인텐트와 일치시키고 매개변수를 추출합니다.
  - Dialogflow가 웹훅 서비스에 웹훅 요청 메시지를 보냅니다. 이 메시지에는 일치하는 인텐트, 작업, 매개변수, 인텐트에 정의된 응답에 대한 정보가      포함됩니다.
@@ -121,8 +121,18 @@ Fulfillment가 사용 설정된 Intent가 일치되는 경우 Dialogflow는 일�
  - Dialogflow가 이 응답을 최종 사용자에게 보냅니다.
  - 최종 사용자가 응답을 보거나 듣습니다.
 
+{% include image.html file="intent/intent_basic_fulfillment.png" max-width="900" caption="Intent Fulfillment 설정" %} 
+
 #### Webhook 서비스
 
 프로덕션 시스템에서 Fulfillment를 사용하려면 Webhook 서비스를 구현하고 배포해야 합니다. Fulfillment를 처리하려면 Webhook 서비스가 이 가이드에 지정된 대로 JSON 요청을 수락하고 JSON 응답을 반환해야 합니다.
 
-{% include image.html file="intent/intent_basic_fulfillment.png" max-width="900" caption="Intent Fulfillment 설정" %} 
+#### Slot Filling을 위한 Webhook
+
+런타임 시 Intent가 일치할 때 최종 사용자가 각 필수 매개변수에 대한 데이터를 제공하지 않으면 Dialogflow 에이전트가 최종 사용자로부터 정보를 계속 수집합니다. 이러한 프로세스를 Slot Filling 이라고 합니다.
+
+기본적으로 Dialogflow는 최종 사용자로부터 모든 필수 데이터를 수집할 때까지 fulfillment Webhook 요청을 전송하지 않습니다.
+
+Slot Filling을 위한 Webhook이 사용 설정된 경우 Dialogflow는 Slot Filling 중에 각 대화 차례에 대한 fulfillment Webhook 요청을 보냅니다.
+
+대부분의 경우 매개변수 프롬프트는 필요한 모든 매개변수를 수집하기에 충분하지만 Slot Filling을 위한 Webhook을 사용하면 매개변수를 수집하는 동안 더욱 구체적인 에이전트 로직을 정의할 수 있습니다. 예를 들어 Webhook은 후속 질문의 맞춤설정을 처리하거나 데이터베이스와 같이 최종 사용자 응답에서 검색할 수 없는 매개변수 Slot을 설정할 수 있습니다.
