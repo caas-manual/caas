@@ -19,7 +19,7 @@ next: {
 ## Chatflow
 {% include callout.html content="화면 위치 : [Intents] > 특정 Intent의 Chatflow> 선택 또는 Chatflow Type Intent 선택 > [Chatflow> 버튼]" type="default" %}
 
-Intent 답변 유형 중 두 번 째 **Chatflow**에 대해 알아보겠습니다. **Chatflow(챗플로우)**란, CAAS에서 제공하는 <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin-left:5px; margin-right: 3px;"></i>*[DM(Dialog Manager)](index.html#chatbot-용어-알기)*</span>을 지칭하는 단어입니다.<br/><br/> 
+Intent 답변 유형 중 두 번 째 **Chatflow**에 대해 알아보겠습니다. **Chatflow(챗플로우)**란, Singlex Chatbot Platform에서 제공하는 <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin-left:5px; margin-right: 3px;"></i>*[DM(Dialog Manager)](index.html#chatbot-용어-알기)*</span>을 지칭하는 단어입니다.<br/><br/> 
 사람과 사람간의 대화에는 이야기 흐름이 있습니다. 처음에 인사를 하고 안부를 묻고 둘 사이의 관심사 등에 대해서 서로 이야기를 진행해 나가듯이 대화 과정에서 하나하나의 이야기 단위들이 (인사, 날씨문의, 취미 등) 모여 대화의 흐름을 구성하게 됩니다. 각 의도마다 제각각의 흐름이 만들어질 수 있습니다. 이런 하나하나의 흐름을 Chatflow라 부르고 Chatflow를 간단하게 만들 수 있는 도구로 Chatflow Design Panel을 제공하고 있습니다.
 
 ### Chatflow 용어 이해
@@ -109,7 +109,7 @@ Intent 답변을 Chatflow로 구성할 때의 장점 중 하나는 Chatflow만�
 
 ### Chatflow Design Panel 사용법
 
-CAAS에서는 대화의 흐름을 Flow Chart 형태로 그릴 수 있도록 **Chatflow Design Panel**을 지원하고 있습니다. Chatflow Design Panel을 통해 코딩을 할 줄 몰라도 마우스 클릭과 드래그만으로 풍부한 대화를 만들어낼 수 있습니다. 모든 흐름은 Node를 기준으로 만들어 집니다.
+Singlex Chatbot Platform에서는 대화의 흐름을 Flow Chart 형태로 그릴 수 있도록 **Chatflow Design Panel**을 지원하고 있습니다. Chatflow Design Panel을 통해 코딩을 할 줄 몰라도 마우스 클릭과 드래그만으로 풍부한 대화를 만들어낼 수 있습니다. 모든 흐름은 Node를 기준으로 만들어 집니다.
 
 #### Node 추가
 

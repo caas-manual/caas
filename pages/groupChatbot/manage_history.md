@@ -48,7 +48,7 @@ next: {
 
 {% include image.html file="manage/history_filtering_default.JPG" max-width="900" caption="History 조회조건 - Default Fallback" %}
 
-**채널** : Facebook Messenger나 Kakaotalk 등 챗봇에 연계된 채널을 선택할 수 있습니다. ***'Test'***를 선택하면 CAAS 내 [Simulator](test_simulator.html#시뮬레이터simulator)에서 입력한 대화들을 볼 수 있습니다.<br/>
+**채널** : Facebook Messenger나 Kakaotalk 등 챗봇에 연계된 채널을 선택할 수 있습니다. ***'Test'***를 선택하면 Singlex Chatbot Platform 내 [Simulator](test_simulator.html#시뮬레이터simulator)에서 입력한 대화들을 볼 수 있습니다.<br/>
 
 {% include image.html file="manage/history_filtering_channel.JPG" max-width="900" caption="History 조회조건 - 채널" %}
 
