@@ -1,16 +1,31 @@
 ---
 title: Intent 생성하기
-tags: [nlu, tutorial, basic]
-keywords: Tutorial
+tags: [intent, tutorial, basic]
+keywords: [tutorial, intent]
 summary: 챗봇의 기본 구조를 이해할 수 있습니다.
 sidebar: tutorial_sidebar
-permalink: basic_create_intent.html
+permalink: 01_create_intent.html
 folder: tutorial
 next: {
-    title: Chatflow 생성하기,
-    url: basic_listen_speak.html
+    title: 답변 만들기,
+    url: 02_create_response.html
 }
 ---
+
+비디오 추가 예시
+01) 필수값
+- file : video 폴더 안에 들어 있는 파일 path
+- type : file type
+{% include video.html file="movie.mp4" type="mp4" %}
+
+02) 옵션 추가
+- thumbnail : 섬네일 이미지 video/thumnail 폴더가 root 폴더
+- width : 현재 max-width는 820px임 화면에서 보고 크기 맞춰주세요.
+- height : 
+- caption : 꼭 달아주세요.
+{% include video.html file="movie.mp4" type="mp4" width="600" height="300" thumbnail="test_image.png" caption="비디오 추가 테스트" %}
+
+나중에 예시 파일은 삭제해주세요.
 
 
 챗봇을 사용하는 기본적인 내용은 튜토리얼의 ***1. Intent 생성하기***와 ***2. Chatflow 생성하기***를 통해 학습할 수 있습니다. 
