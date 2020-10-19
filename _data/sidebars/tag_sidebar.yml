@@ -17,6 +17,9 @@ entries:
     - title: Chatbot 운영하기
       url: /manage_history.html
       output: web, pdf
+    - title: Chatbot 교육자료
+      url: /education_study_guide.html
+      output: web, pdf      
     #- title: 사용자 의견 보내기
     #  url: /feedback.html
     #  output: web, pdf
