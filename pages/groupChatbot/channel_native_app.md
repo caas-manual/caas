@@ -11,8 +11,8 @@ previous: {
     url: test_bulk.html
 }
 next: {
-    title: Facebook,
-    url: channel_facebook.html
+    title: Front UI,
+    url: channel_front_ui.html
 }
 ---
 ## Native App(API)
@@ -128,7 +128,8 @@ Request Header에 X-CHATBOT-SESSION 값을 설정하지 않을 경우 새로운 
   "fulfillmentMessages":[JSON],
   "customPayload":JSON,
   "intent":JSON,
-  "sentiment":number
+  "sentiment":number,
+  "slotNode":"string"
 }
 ```
  
@@ -141,6 +142,7 @@ Request Header에 X-CHATBOT-SESSION 값을 설정하지 않을 경우 새로운 
 | customPayload | JSON | No | 고객의 Webhook 호출의 경우 반환된 응답 메세지 |
 | intent | JSON | Yes | 대화에 연결된 intent 정보 |
 | sentiment | number | No | 감성분석 결과 -1.0 (부정적 감정)과 1.0 (긍정적 감정) 사이의 값 |
+| slotNode | String | Yes | 대화에 대한 응답이 slat Node인지 여부 |
 
  * queryResult.messages Object
 
@@ -330,7 +332,8 @@ Request Header에 X-CHATBOT-SESSION 값을 설정하지 않을 경우 새로운 
             "id": "9994865e-42e5-448b-acbf-30d28cf19ab4",
             "name": "Default Welcome Intent",
             "confidence": 1.0
-        }
+        },
+        "slotNode": "N"
     },
     "requestId": "a14cc29a-5978-44b1-91ab-81a4b27395f4",
     "tags": {}
@@ -478,7 +481,8 @@ Request Header에 X-CHATBOT-SESSION 값을 설정하지 않을 경우 새로운 
             "id": "bd4df229-b6cf-4487-9200-96b1f514a854",
             "name": "[매장]_carousel",
             "confidence": 0.82189095
-        }
+        },
+        "slotNode": "N"
     },
     "requestId": "5c8d53d8-e7ae-419a-9c34-68426e193769",
     "tags": {
@@ -609,6 +613,7 @@ Request Header에 X-CHATBOT-SESSION 값을 설정하지 않을 경우 새로운 
                     "name": "01.Alice 검증 - 인사",
                     "id": "1d3a9304-de9f-4199-a970-49d2aa713d7c"
                 },
+                "slotNode": "N",
                 "parameters": {}
             },
             "channelId": "default",
@@ -648,6 +653,7 @@ Request Header에 X-CHATBOT-SESSION 값을 설정하지 않을 경우 새로운 
                     "name": "Default Fallback Intent",
                     "id": "442c83b5-fcbc-4001-a6c8-78edc34dba67"
                 },
+                "slotNode": "N",
                 "parameters": {}
             },
             "channelId": "default",
