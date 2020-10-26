@@ -2,11 +2,17 @@
     {% if {{include.url}} %}
     <a class="no_icon" target="_blank" href="{{include.url}}">
     {% endif %}
-        <video class="tutorial-video" {% if {{include.thumbnail}} %} poster="video/thumbnail/{{include.thumbnail}}" {% endif %} alt="{{include.alt}}" 
+        <video class="tutorial-video" preload="auto" {% if {{include.thumbnail}} %} poster="video/thumbnail/{{include.thumbnail}}" {% endif %} alt="{{include.alt}}" 
             {% if {{include.width}} %} width="{{include.width}}"{% endif %}
             {% if {{include.height}} %} height="{{include.height}}"{% endif %} controls>
             {% if {{include.file}} %}
             <source src="video/{{include.file}}" type="video/{{include.type}}">
+            <object data="video/{{include.file}}" 
+                {% if {{include.width}} %} width="{{include.width}}"{% endif %}
+                {% if {{include.height}} %} height="{{include.height}}"{% endif %}>
+                <embed {% if {{include.width}} %} width="{{include.width}}"{% endif %}
+                {% if {{include.height}} %} height="{{include.height}}"{% endif %} src="video/{{include.file}}">
+            </object>
             {% endif %}            
         </video>
     {% if {{include.url}} %}
