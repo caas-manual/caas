@@ -1,0 +1,41 @@
+{
+ "nodeList": [
+  {
+   "name": "Slot Node1",
+   "description": "",
+   "nodeId": "slot_160068606828200002",
+   "nodeType": "slot",
+   "jumpIntentNo": null,
+   "apiNo": null,
+   "positionInfo": "{\"x\":173,\"y\":163,\"width\":160,\"height\":35}",
+   "relationInfo": "[\"speak_160066561754809482\"]",
+   "nodeItemList": [
+    {
+     "orderSeq": 0,
+     "itemInfo": "{\"messageSet\":[{\"message\":\"어떤 영화를 예매하시겠어요?\",\"imageUrl\":\"\",\"videoUrl\":\"\",\"isVideo\":false,\"$$hashKey\":\"object:1951\"}],\"buttons\":[],\"type\":\"basic\",\"paramNo\":\"11207166-911a-4714-bfa3-dda20a2bf90e/00f4e44d-ac83-4376-b7fb-5cfdf0189d39\"}",
+     "paramId": "00f4e44d-ac83-4376-b7fb-5cfdf0189d39",
+     "paramName": "MovieName"
+    }
+   ],
+   "startNode": true
+  },
+  {
+   "name": "Speak Node",
+   "description": "",
+   "nodeId": "speak_160066561754809482",
+   "nodeType": "speak",
+   "jumpIntentNo": null,
+   "apiNo": null,
+   "positionInfo": "{\"x\":310,\"y\":264,\"width\":160,\"height\":35}",
+   "relationInfo": "[]",
+   "nodeItemList": [
+    {
+     "orderSeq": 0,
+     "itemInfo": "{\"messageSet\":[{\"message\":\"영화 $MovieName 저도 좋아해요.\",\"imageUrl\":\"\",\"videoUrl\":\"\",\"isVideo\":false,\"$$hashKey\":\"object:2009\"}],\"buttons\":[],\"type\":\"basic\"}"
+    }
+   ],
+   "startNode": false
+  }
+ ],
+ "parameterList": []
+}

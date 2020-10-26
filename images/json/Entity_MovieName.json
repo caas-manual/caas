@@ -1,0 +1,23 @@
+{
+  "botId" : "11207166-911a-4714-bfa3-dda20a2bf90e",
+  "id" : "8a65d7be-95e2-42cc-a83d-ce3ad3517ad3",
+  "df" : "4e4ab6bb-ebcd-4b16-857f-faa0921cb549",
+  "name" : "MovieName",
+  "synonym" : true,
+  "regexp" : false,
+  "autoExpansion" : false,
+  "fuzzy" : false,
+  "languages" : [ "ko" ],
+  "categoryName" : "",
+  "reference" : [ {
+    "synonymList" : [ "패왕별희 더 오리지널", "패왕별희" ],
+    "language" : "ko",
+    "id" : "0f8380c4-15b3-429d-b536-eead49fcc9ce",
+    "category" : "패왕별희 더 오리지널"
+  }, {
+    "synonymList" : [ "로마의 휴일", "로마영화", "로마휴일", "오드리 햅번 영화" ],
+    "language" : "ko",
+    "id" : "3d94f16b-705c-4a64-a704-6b50780e3dad",
+    "category" : "로마의 휴일"
+  } ]
+}

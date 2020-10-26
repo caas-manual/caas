@@ -1,0 +1,46 @@
+{
+  "botId" : "11207166-911a-4714-bfa3-dda20a2bf90e",
+  "id" : "b6fae201-e04c-4702-9ff7-c8749e22ade7",
+  "parentId" : "",
+  "df" : "9d7eef15-ae84-41ae-9df5-2e864b24cf5e",
+  "name" : "영화 예매",
+  "type" : "G",
+  "depth" : 0,
+  "isDisableML" : false,
+  "isFulfillment" : false,
+  "isSlotFilling" : false,
+  "isChatflow" : false,
+  "endConversation" : false,
+  "priority" : "N",
+  "languages" : [ "ko" ],
+  "defaultLanguage" : "ko",
+  "categoryName" : "",
+  "response" : [ ],
+  "context" : [ ],
+  "event" : [ {
+    "id" : "d04eb6bf-9e86-46d7-a195-f8eddac835c6",
+    "name" : "84c07f09-c6ba-4307-9ab5-ec215dad604f",
+    "isChatflow" : true
+  } ],
+  "phrase" : [ {
+    "id" : "b12ccdc0-642e-4466-93fa-763c071aa129",
+    "df" : "",
+    "phrase" : "영화 보고 싶어",
+    "language" : "ko",
+    "order" : 0
+  }, {
+    "id" : "d47bc5fa-4bbb-49a2-9fd1-2a67ea8ece80",
+    "df" : "",
+    "phrase" : "나 영화 볼래",
+    "language" : "ko",
+    "order" : 0
+  }, {
+    "id" : "ff28589c-9c27-44b9-afa2-e7e5070f7e10",
+    "df" : "",
+    "phrase" : "영화 예매하려구",
+    "language" : "ko",
+    "order" : 0
+  } ],
+  "param" : [ ],
+  "chatflow" : [ ]
+}

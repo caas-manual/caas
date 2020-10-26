@@ -1,0 +1,26 @@
+{
+  "botId" : "11207166-911a-4714-bfa3-dda20a2bf90e",
+  "id" : "09ca57df-d800-4a6e-9058-9fd21a2b7803",
+  "name" : "일별박스오피스API",
+  "description" : "영화진흥위원회 오픈 API로 특정 일자의 박스 오피스 정보를 제공합니다.",
+  "method" : "GET",
+  "url" : "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json",
+  "contentType" : "application/json",
+  "param" : [ {
+    "id" : "711871e9-dfa9-4bb6-a01d-08fe0fa40dab",
+    "type" : "P",
+    "isRequired" : true,
+    "description" : "발급받은키",
+    "name" : "key",
+    "value" : "430156241533f1d058c603178cc3ca0e",
+    "editable" : true
+  }, {
+    "id" : "db8a41c5-6e25-43d4-8131-2a006570c2a4",
+    "type" : "P",
+    "isRequired" : true,
+    "description" : "조회하고자 하는 날짜 (YYYYMMDD)",
+    "name" : "targetDt",
+    "value" : "20200917",
+    "editable" : true
+  } ]
+}

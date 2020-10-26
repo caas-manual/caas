@@ -1,0 +1,22 @@
+{
+ "nodeList": [
+  {
+   "name": "Speak Node",
+   "description": "",
+   "nodeId": "speak_160066561754809482",
+   "nodeType": "speak",
+   "jumpIntentNo": null,
+   "apiNo": null,
+   "positionInfo": "{\"x\":251,\"y\":117,\"width\":160,\"height\":35}",
+   "relationInfo": "[]",
+   "nodeItemList": [
+    {
+     "orderSeq": 0,
+     "itemInfo": "{\"messageSet\":[{\"message\":\"탁월한 선택이에요!\",\"imageUrl\":\"\",\"videoUrl\":\"\",\"isVideo\":false,\"$$hashKey\":\"object:1772\"},{\"message\":\"영화 좋죠!\\n영화 보기 좋은 날씨에요~\",\"imageUrl\":\"\",\"videoUrl\":\"\",\"isVideo\":false,\"$$hashKey\":\"object:1784\"}],\"buttons\":[],\"type\":\"basic\"}"
+    }
+   ],
+   "startNode": true
+  }
+ ],
+ "parameterList": []
+}

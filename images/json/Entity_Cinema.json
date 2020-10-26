@@ -1,0 +1,23 @@
+{
+  "botId" : "11207166-911a-4714-bfa3-dda20a2bf90e",
+  "id" : "af9fade4-af42-4eb7-a55e-6941d85d7c97",
+  "df" : "b694e8b2-3506-4b60-a164-7bbe185077af",
+  "name" : "Cinema",
+  "synonym" : true,
+  "regexp" : false,
+  "autoExpansion" : false,
+  "fuzzy" : false,
+  "languages" : [ "ko" ],
+  "categoryName" : "",
+  "reference" : [ {
+    "synonymList" : [ "등촌CGV", "등촌영화관", "등촌씨지비" ],
+    "language" : "ko",
+    "id" : "c987b551-af51-465a-b71b-9f67cbc3601b",
+    "category" : "등촌CGV"
+  }, {
+    "synonymList" : [ "목동CGV", "목동영화관", "목동씨지비" ],
+    "language" : "ko",
+    "id" : "dc176900-a2b1-440d-b30a-bc242aae93ed",
+    "category" : "목동CGV"
+  } ]
+}

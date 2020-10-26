@@ -12,53 +12,118 @@ next: {
 }
 ---
 
+자, 이제 챗봇이 알아들은 말에 대해 어떻게 답변할지를 설정하는 가장 간단한 방법부터 소개해 드리겠습니다.
 
-챗봇을 사용하는 기본적인 내용은 튜토리얼의 ***1. Intent 생성하기***와 ***2. Chatflow 생성하기***를 통해 학습할 수 있습니다. 
+AI Chatbot 플랫폼은 이번 업그레이드와 함께 구글의 DialogFlow 기술을 수용하게 되었습니다.
 
-## 챗봇의 기본 구조
+기존 LG CNS 챗봇 플랫폼의 대화 설계 방식인 Chatflow 방식과 구글의 DialogFlow 방식을 각각 나눠 따라하기 실습을 진행하겠습니다.
 
-챗봇의 기본 동작원리를 생각해보면 사람들이 대화할 때 일어나는 의식의 흐름과 크게 다르지 않습니다. 사용자가 챗봇에게 어떤 말을 걸면 챗봇이 그 말을 듣고 사용자의 의도를 파악하여 적절한 답변을 하게 됩니다. 원활한 대화가 되기 위해서는 말을 잘 이해하고, 원하는 대답을 해주는 것이 중요합니다.
-이를 위해 챗봇의 기본 구조는 크게 사용자의 의도(Intent)를 파악할 수 있는 ***자연어 이해(NLU)***와 여러 상황에 따라 적절하게 답변을 할 수 있도록 대화를 설계하는 ***대화흐름(Chatflow)***으로 구성되어 있습니다. 
-어떤 말을 알아들을 것인지와 어떻게 대답할 것인지를 정의하면 하나의 대화를 완성할 수 있습니다.
+## DialogFlow형 답변 설정하기
 
-## 챗봇 생성
-챗봇을 이용하려면 먼저 <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin: 0px 5px"></i>[로그인](https://dap.lgcns.com/sportal/common/login/retrieveLoginForm.do)</span>을 해주셔야 합니다.
+기존에 Google의 DialogFlow 기반으로 챗봇을 개발해 보신 분이라면, DialogFlow의 구조는 익숙하질 거라고 생각합니다.
 
-처음 로그인을 하시면, 먼저 챗봇을 만들어주세요.
-챗봇 생성방법은 document의 <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin: 0px 5px"></i>[간단한 챗봇 만들어보기](./basic_create_chatbot.html)</span>를 참고하시면 됩니다.
+간단하게 소개드리면, DialogFlow형 답변을 설정할 때는 Response / Context / Fulfillment 설정이 가능합니다.
 
-챗봇이 생성되었으면, 이제 기본적인 것부터 차근차근 챗봇을 만들어 보겠습니다.
-이해를 돕기 위해 피자가게의 사업자가 피자를 주문 받을 수 있는 챗봇을 만든다고 가정하여 진행하겠습니다.
+***Response***는 해당 Intent에 대한 답변을 설정하는 영역입니다. 해당 영역에 기본 텍스트 답변 외에 이미지, 오디오 등을 답변으로 세팅하는 것도 가능합니다.
 
+Response 영역에 답변은 반드시 설정할 필요는 없지만, 이번 과정의 따라하기 실습에서는 간단한 텍스트 답변을 이 Response 영역에 설정해 챗봇의 동작을 테스트 해보려고 합니다.
 
-## 의도추론(Intent) 만들기
-{% include callout.html content="화면 위치 : [자연어이해(NLU)] > [의도추론(Intent)]" type="default" %}
-피자를 주문 받으려면 “피자 주문해줘”와 같은 사용자의 말이 입력되었을 때 “피자를 주문하고 싶다”는 사용자의 의도를 파악할 수 있어야 합니다. 그 의도를 정의할 수 있는 메뉴가 “의도추론 (Intent)” 입니다.
+***Context***는 대화의 맥락을 설정하는 영역입니다. Context로 연결된 Intent는 해당 Intent의 대화 중에 새로운 Intent 추론을 하게 될 경우가중치를 부여 받게 됩니다. 더 자세한 내용은 이 Documentation 페이지를 참고해 주세요. 
 
-### Intent 생성
-1) ***”Intent 생성”*** 버튼을 클릭하여 Intent 생성 페이지로 이동해주세요.
+***Fulfillment***는 사용하겠다고 설정하는 경우, Response에 정의한 응답이 아닌 Fulfillment에 연결한 Webhook을 활용해 답변을 하게 됩니다. 더 자세한 내용은 이 Documentation 페이지를 참고해 주세요.
 
-{% include image.html file="dapTalk/tutorial/basic01_intent_01.png" max-width="900" caption="Intent 없는 상태" %}
+### 따라하기 영상 3 : Dialogflow형 답변 설정하기
 
-2) 상단의 Intent명 입력란에 ***”피자주문하기”***과 같이 Intent명을 적어주세요. 챗봇의 완성도가 높아질수록 Intent 수가 많아지므로 명확히 구분할 수 있고, 검색하기 쉽게 정의하는 것이 좋습니다.
+이번 따라하기에서는 "영화 예매" 의도를 발화한 사용자에게 챗봇이 어떻게 답변을 할지를 Google DialogFlow형 답변 방식으로 설정하는 실습을 해보겠습니다.
 
-3) ***“피자 주문해줘”***와 같이 피자주문 Intent로 연결될 수 있는 예문을 1개 이상 필수로 등록해야 합니다. 예문은 여러 Intent들과 중복되지 않으면서 구체적으로 적어주는 것이 좋습니다. 사용자가 입력한 말과 예문을 비교하여 가장 비슷한 Intent로 연결하기 때문에 응답의 정확도를 높이기 위해서는 예문을 적절하게 정의하는 것이 매우 중요합니다.
+이번 따라하기 영상을 마치면, 실습환경 플랫폼과 테스트 메신저에서 다음과 같은 화면 결과를 얻으실 수 있습니다. 
 
-4)  우측 상단의 답변유형에서 Chatflow 체크박스를 설정해야 Chatflow와 연결할 수 있습니다.  Chatflow 박스가 아닌 간편답변을 체크한 경우 Chatflow에 연결하지 않고 바로 간편답변으로 등록된 메세지를 답변으로 출력합니다. 간편답변 등록은 Intent 생성페이지 하단에 위치합니다.
+{% include image.html file="education\response_01.png" max-width="900" %}
 
-{% include image.html file="dapTalk/tutorial/basic01_intent_02.png" max-width="900" caption="Intent명과 예문 입력된 모습" %}
+아래 썸네일을 클릭해 영상을 시청해 주세요. 
 
-5) Intent 명과 예문을 입력하였으면 ***“저장”*** 버튼을 클릭하여 Intent를 생성합니다. 그 외의 Intent 설정 항목에 관해서는 document의 <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin: 0px 5px"></i>[의도관리](./intent.html)</span>를 보시면 더욱 자세히 알 수 있습니다.
+{% include video.html file="response_01.mp4" type="mp4" %}
 
+DialogFlow형 답변 설정하기 잘 따라 오셨나요? 
 
-## Intent 테스트
-우측의 테스트 패널에서 저장한 Intent가 제대로 동작하는지 테스트 해볼 수 있습니다.
-NLU Intent 탭에서 “피자 주문해줘” 예문을 입력해보면 Intent가 “피자주문하기”으로 조회되는 것을 확인할 수 있습니다.
+실습이 잘 되지 않는다면, 아래 Hint를 참고해서 따라해 주세요. 
 
-{% include image.html file="dapTalk/tutorial/basic01_intent_03.png" max-width="900" caption="테스트패널에서 Intent 테스트" %}
+*** HINT ***
 
+교육 강사가 작성한 Intent 정보를 다운로드한 파일 입니다. 아래 파일을 다운로드 받아, 아래 가이드 대로 업로드 해보세요.
 
-## 다음 Step에서는
-사용자의 “피자주문하기” 의도를 파악할 수 있게 되었으니 이제 어떻게 응답할지 정의해야겠죠?
-대화흐름(Chatflow) 메뉴에서 챗봇이 대답할 메시지를 정의해보도록 하겠습니다.
+업로드 하시면, 기존에 직접 작업하던 Intent 상세 내역이 업로드 한 파일의 내용으로 갱신되니 본인의 작업을 유지하기 위해서는 작업하던 Intent명을 "영화 예매"가 아닌 다른 이름으로 변경해 주세요. 
 
+* 다운로드 파일: <a href="images/json/intent_movie_reservation_2.json" download>intent_movie_reservation_2.json</a>
+
+1) Intent 목록조회 화면에서 목록 위에 **업로드** 버튼을 클릭합니다. 
+
+{% include image.html file="education\response_02.png" max-width="900" %}
+
+2) Intent 업로드 화면에서 **파일선택** 버튼을 클릭해 다운로드 한 "intent_movie_reservation_2.json" 파일을 선택합니다.(이미지에서는 Intent_영화_예매.json을 선택합니다.)
+
+{% include image.html file="education\response_03.png" max-width="900" %}
+
+3) 선택한 파일 정보가 로드 되면 **저장** 버튼을 클릭합니다.
+
+{% include image.html file="education\response_04.png" max-width="900" %}
+
+4) 확인 창이 보여지면 **확인** 버튼을 클릭합니다.
+
+{% include image.html file="education\response_05.png" max-width="900" %}
+
+5) 성공했다는 메시지가 보여지는 걸 확인한 후 **취소** 버튼을 클릭해 다시 목록 조회 화면으로 돌아옵니다. 
+
+{% include image.html file="education\response_06.png" max-width="900" %}
+
+이렇게 업로드를 완료 한 후, 다시 따라하기 영상의 마지막 부분처럼 테스트 메신저 창에서 테스트해 보세요. 강사와 동일한 결과를 얻으 실 수 있습니다.
+
+## Chatflow형 답변 설정하기
+
+**Chatflow**는 LG CNS AI Chatbot에서 제공하는 Dialog Manager 기능을 말합니다.
+
+Chatflow는 Chat을 Flow형태를 구현한다는 의미로 캔버스와 같이 생긴 Chatflow Design Panel 상에서 UI 기반으로 대화흐름 설계가 가능합니다.
+
+Chatflow는 **Node**라는 기능의 단위로 구성되는데요, 이 Node는 기능에 따라 아래와 같이 각기 다른 이름을 가지고 있습니다. 각 Node에 대한 자세한 설명은 마지막 Chatflow Node 활용 모듈에서 살펴보도록 하겠습니다.
+
+{% include image.html file="education\response_07.png" max-width="900" %}
+ 
+### 따라하기 영상 4 : Chatflow형 답변 설정하기
+
+이번 따라하기에서는 "영화 예매" 의도를 발화한 사용자에게 챗봇이 어떻게 답변을 할지를 Chatflow형 답변 방식으로 설정하는 실습을 해보겠습니다.
+
+이번 따라하기 영상을 마치면, 실습환경 플랫폼과 테스트 메신저에서 다음과 같은 화면 결과를 얻으실 수 있습니다. 
+
+{% include image.html file="education\response_08.png" max-width="900" %}
+
+아래 썸네일을 클릭해 영상을 시청해 주세요. 
+
+{% include video.html file="response_02.mp4" type="mp4" %}
+
+Chatflow형 답변 설정하기 잘 따라 오셨나요? 
+
+실습이 잘 되지 않는다면, 아래 Hint를 참고해서 따라해 주세요. 
+
+*** HINT ***
+
+교육 강사가 작성한 Chatflow 정보를 다운로드한 파일 입니다. 아래 파일을 다운로드 받아, 아래 가이드 대로 업로드 해보세요.
+
+* 다운로드 파일: <a href="images/json/chatflow_movie_reservation_1.json" download>chatflow_movie_reservation_1.json</a>
+
+1) Chatflow 편집 캔버스 하단에 있는 **업로드** 버튼을 클릭합니다. 
+
+{% include image.html file="education\response_09.png" max-width="900" %}
+
+2) Chatflow 업로드 팝업 창에서  **파일 선택** 버튼을 클릭해 다운로드 한 "chatflow_movie_reservation_1" 파일을 선택합니다. (이미지에서는 Chatflow_영화 예매(영상4_Chatflow_답변설정).json을 선택합니다.)
+
+{% include image.html file="education\response_10.png" max-width="900" %}
+
+3) 선택한 파일명이 로드 되면 **업로드** 버튼을 클릭해 파일을 적용 합니다.
+
+{% include image.html file="education\response_11.png" max-width="900" %}
+
+4) 캔버스에 변경사항이 아래와 같이 반영되었다면, **저장** 버튼을 눌러 Chatflow 업로드 내용을 저장합니다.
+
+{% include image.html file="education\response_12.png" max-width="900" %}
+
+이렇게 업로드를 완료 한 후, 다시 따라하기 영상의 마지막 부분처럼 테스트 메신저 창에서 테스트해 보세요. 강사와 동일한 결과를 얻으 실 수 있습니다.
