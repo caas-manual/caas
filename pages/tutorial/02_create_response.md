@@ -40,7 +40,7 @@ Response 영역에 답변은 반드시 설정할 필요는 없지만, 이번 과
 
 {% include image.html file="education\response_01.png" max-width="900" %}
 
-아래 썸네일을 클릭해 영상을 시청해 주세요. 
+아래 영상을 클릭해서 시청해 주세요. 
 
 {% include video.html file="response_01.mp4" type="mp4" %}
 
@@ -96,8 +96,8 @@ Chatflow는 **Node**라는 기능의 단위로 구성되는데요, 이 Node는 �
 
 {% include image.html file="education\response_08.png" max-width="900" %}
 
-아래 썸네일을 클릭해 영상을 시청해 주세요. 
-
+아래 영상을 클릭해서 시청해 주세요. 
+ 
 {% include video.html file="response_02.mp4" type="mp4" %}
 
 Chatflow형 답변 설정하기 잘 따라 오셨나요? 

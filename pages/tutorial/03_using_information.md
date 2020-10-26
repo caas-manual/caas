@@ -117,7 +117,7 @@ Entity는 특정 정보를 대표하는 ***대표어(Entry)***와 그 대표어�
 
 {% include image.html file="education\information_03.png" max-width="900" %}
 
-아래 썸네일을 클릭해 영상을 시청해 주세요.
+아래 영상을 클릭해서 시청해 주세요. 
 
 {% include video.html file="information_01.mp4" type="mp4" %}
 

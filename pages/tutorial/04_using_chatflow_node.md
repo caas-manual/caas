@@ -92,7 +92,7 @@ Function Node를 활용하는 방법도 이어지는 따라하기 영상에서 �
 
 {% include image.html file="education\chatflow_07.png" max-width="900" %}
 
-아래 썸네일을 클릭해 영상을 시청해 주세요.
+아래 영상을 클릭해서 시청해 주세요. 
 
 {% include video.html file="chatflow_01.mp4" type="mp4" %}
 
@@ -113,7 +113,7 @@ Function Node를 활용하는 방법도 이어지는 따라하기 영상에서 �
 
 {% include image.html file="education\chatflow_08.png" max-width="900" %}
 
-아래 썸네일을 클릭해 영상을 시청해 주세요.
+아래 영상을 클릭해서 시청해 주세요. 
 
 {% include video.html file="chatflow_02.mp4" type="mp4" %}
 
@@ -187,4 +187,4 @@ API Node와 Function Node를 생성하고 강사의 시연과 같이 테스트 �
 
 이렇게 업로드를 완료 한 후, 다시 따라하기 영상의 마지막 부분처럼 테스트 메신저 창에서 테스트해 보세요. 강사와 동일한 결과를 얻으 실 수 있습니다.
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    

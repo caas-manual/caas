@@ -12,22 +12,6 @@ next: {
 }
 ---
 
-비디오 추가 예시
-01) 필수값
-- file : video 폴더 안에 들어 있는 파일 path
-- type : file type
-{% include video.html file="movie.mp4" type="mp4" %}
-
-02) 옵션 추가
-- thumbnail : 섬네일 이미지 video/thumnail 폴더가 root 폴더
-- width : 현재 max-width는 820px임 화면에서 보고 크기 맞춰주세요.
-- height : 
-- caption : 꼭 달아주세요.
-{% include video.html file="movie.mp4" type="mp4" width="600" height="300" thumbnail="test_image.png" caption="비디오 추가 테스트" %}
-
-나중에 예시 파일은 삭제해주세요.
-
-
 챗봇을 사용하는 기본적인 내용은 튜토리얼의 ***1. Intent 생성하기***와 ***2. Chatflow 생성하기***를 통해 학습할 수 있습니다. 
 
 챗봇은 대화하는 프로그램입니다. 즉, 챗봇이 어떤 말을 알아들을 것인지, 이 챗봇의 역할이 뭔지를 정의하고, 알아들은 말에 대해 어떻게 답변할지를 정의하면 하나의 대화, 챗봇이 완성되는 거겠죠?
@@ -60,7 +44,7 @@ next: {
 
 혹시 따라하기 영상1을 따라하는 도중 문제가 있으신 분은 교육 강사에게 꼭! 문의해 주세요.
 
-아래 썸네일을 클릭해 영상을 시청해 주세요. 
+아래 영상을 클릭해서 시청해 주세요. 
 
 {% include video.html file="intent_01.mp4" type="mp4" %}
 
@@ -72,7 +56,7 @@ next: {
 
 {% include image.html file="education\intent_03.png" max-width="900" %}
 
-아래 썸네일을 클릭해 영상을 시청해 주세요. 
+아래 영상을 클릭해서 시청해 주세요. 
 
 {% include video.html file="intent_02.mp4" type="mp4" %}
 
