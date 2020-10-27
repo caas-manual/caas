@@ -46,7 +46,7 @@ next: {
 
 아래 영상을 클릭해서 시청해 주세요. 
 
-{% include video.html file="intent_01.mp4" type="mp4" width="900" height="400"%}
+{% include video.html file="intent_01.mp4" type="mp4" max-width="900"%}
 
 ### 따라하기 영상 2 : Intent 만들기
 
