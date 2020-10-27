@@ -94,7 +94,7 @@ Function Node를 활용하는 방법도 이어지는 따라하기 영상에서 �
 
 아래 영상을 클릭해서 시청해 주세요. 
 
-{% include video.html file="chatflow_01.mp4" type="mp4" %}
+{% include video.html file="chatflow_01.mp4" type="mp4" max-width="900"%}
 
 따라하기 영상에서 교육 강사가 작성하는 내용은 아래를 참고 하세요.
 
@@ -115,7 +115,7 @@ Function Node를 활용하는 방법도 이어지는 따라하기 영상에서 �
 
 아래 영상을 클릭해서 시청해 주세요. 
 
-{% include video.html file="chatflow_02.mp4" type="mp4" %}
+{% include video.html file="chatflow_02.mp4" type="mp4" max-width="900"%}
 
  따라하기 영상에서 교육 강사가 작성하는 내용은 아래를 참고 하세요.
 

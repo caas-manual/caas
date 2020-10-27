@@ -58,7 +58,7 @@ next: {
 
 아래 영상을 클릭해서 시청해 주세요. 
 
-{% include video.html file="intent_02.mp4" type="mp4" %}
+{% include video.html file="intent_02.mp4" type="mp4" max-width="900"%}
 
 
 Intent 생성 따라하기 잘 따라 오셨나요? 

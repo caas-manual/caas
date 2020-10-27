@@ -119,7 +119,7 @@ Entity는 특정 정보를 대표하는 ***대표어(Entry)***와 그 대표어�
 
 아래 영상을 클릭해서 시청해 주세요. 
 
-{% include video.html file="information_01.mp4" type="mp4" %}
+{% include video.html file="information_01.mp4" type="mp4" max-width="900"%}
 
 따라하기 영상에서 교육 강사가 작성하는 내용은 아래를 참고 하세요.
 
@@ -188,7 +188,7 @@ Entity는 특정 정보를 대표하는 ***대표어(Entry)***와 그 대표어�
 
 아래 썸네일을 클릭해 영상을 시청해 주세요. 
 
-{% include video.html file="information_02.mp4" type="mp4" %}
+{% include video.html file="information_02.mp4" type="mp4" max-width="900"%}
 
 따라하기 영상에서 교육 강사가 작성하는 내용은 아래를 참고 하세요.
 
@@ -283,7 +283,7 @@ Case 5)  Case 3 상황에서 “한번만 물어보기” 실행으로 피자 �
 
 아래 썸네일을 클릭해 영상을 시청해 주세요. 
 
-{% include video.html file="information_03.mp4" type="mp4" %}
+{% include video.html file="information_03.mp4" type="mp4" max-width="900"%}
 
 - Slot Node 내 작성하는 질문지
 
