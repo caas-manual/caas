@@ -99,7 +99,8 @@ parameter 입력 후, 화면 제일 하단의 **테스트** 버튼을 클릭해,
 
 <!-- ** 수정 필요 : JSON으로 보여지고 tree는 API 노드에서 확인 가능함을 보여주기 -->
 #### Response API
-실행 성공시, Response API에서 JSON 형태의 데이터가 조회됩니다.<br/>
+먼저 API를 저장한 뒤 [방화벽 차단 해제 신청](api_basic.html#방화벽-차단-해제-신청) 과정을 거친 다음에 테스트 실행 결과를 확인할 수 있습니다.<br/>
+등록한 API가 제대로 실행되었을 경우, Response API에서 JSON 형태의 데이터가 조회됩니다.<br/>
 API 적용 결과 조회된 데이터를 JSON형태로 조회해서 보여줍니다. 실패시 디버그 메세지 또는 아무런 데이터가 조회되지 않습니다.
 <!-- API 테스트 결과 화면(JSON) -->
 {% include image.html file="api/08_api_basic_response_json_2.PNG" max-width="900" caption="Response API 예시" %}
@@ -110,6 +111,19 @@ API 정보 정상 입력 후 **저장** 버튼을 클릭해, API 등록 정보�
 #### 취소
 {% include callout.html content="위치 : [APIs] - [API클릭] - [취소]" type="default" %}
 API 상세화면의 우측 하단에 **취소**  버튼이 존재합니다.  **취소**  클릭시, API 목록화면으로 이동하고, 작성하던 정보는 삭제됩니다. 
+
+#### 방화벽 차단 해제 신청
+API를 등록한 뒤 사용하기 위해서는 먼저 방화벽 차단 해제가 완료되어야 합니다. API를 생성하고 저장하면 아래의 그림과 같이 화면 우측 하단에 '방화벽 차단 해제' 버튼이 생긴 것을 확인할 수 있습니다. 해제를 하려면 '방화벽 차단 해제' 버튼을 클릭합니다.<br/>
+{% include image.html file="api/11_api_firewall_1.PNG" max-width="900" caption="API 방화벽 차단 해제 신청" %}
+
+만일 같은 챗봇 내에서 동일한 API 또는 url가 이미 해제 신청 중일시, '방화벽 차단 해제' 버튼을 클릭하면 아래와 같은 알림 메세지 팝업이 나타납니다.
+{% include image.html file="api/11_api_firewall_6.PNG" max-width="900" caption="동일 API 해제 신청 중인 경우 알림 메세지" %}
+
+방화벽 차단 해제를 취소하고 싶다면 '방화벽 차단 해제 취소' 버튼을 클릭하면 됩니다.
+{% include image.html file="api/11_api_firewall_5.PNG" max-width="900" caption="API 방화벽 차단 해제 취소" %}
+
+방화벽 차단 해제가 되었다면 API의 상세화면에서 아래와 같이 버튼이 '방화벽 차단 해제 완료' 표시가 되면서 비활성화 됩니다.
+{% include image.html file="api/11_api_firewall_4.PNG" max-width="900" caption="API 방화벽 차단 해제 완료" %}
 
 
 ## API 등록 예시
