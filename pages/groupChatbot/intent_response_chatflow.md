@@ -166,7 +166,8 @@ Chatflow를 그릴 때 작업 효율성을 높이기 위해 Keyboard 단축키�
 |----------|-----|
 | Node 선택 - `Delete` | 선택한 Node를 삭제 |
 | Node 선택 - `Ctrl + c` | 선택한 Node와 연결선은 복사 |
-| `Ctrl + v` | 복사한 Node 붙여넣기 |
+| `Ctrl + v` | 복사한 Node 붙여넣기. 내용을 포함하여 복사합니다. |
+| `Ctrl + Shift + v` | 복사한 Node 붙여넣기. 선택된 노드 구조만 복사됩니다. |
 | `Ctrl + z` | Node 삭제, 생성 등의 작업을 이전 상태로 되돌림. 최대 10회. |
 
 ### Chatflow 업로드/다운로드
