@@ -18,7 +18,7 @@ folder: groupChatbot
 
 **Chatbot(챗봇)**은 사용자의 의도를 파악하여, 답변/접수를 대화로 진행하는 Bot서비스입니다<br/> 
 이때 사용자의 의도를 알아내는 것을 ARS처럼 숫자나 버튼, 명령어로 알아낼 수도 있고 사람들이 평소에 쓰는 자연어를 통해 알아낼 수도 있습니다. ARS처럼 명확하게 의도를 알아내고 처리하는 방식을 룰기반 Chatbot이라고 하고, 자연어처리를 통해 의도를 인식하고 답변하는 Chatbot을 지능형 Chatbot이라고 말하고 있습니다.<br/> 
-**CAAS(Conversation AI as a Service)**는 이러한 Chatbot들을 간단하게 만들 수 있도록 지원하는 서비스입니다.
+**Singlex Chatbot Platform**은 이러한 Chatbot들을 간단하게 만들 수 있도록 지원하는 서비스입니다.
 
 ### Chatbot 동작원리 
 
@@ -74,5 +74,5 @@ Chatbot 동작원리를 살펴보면, 다양한 용어들이 나옵니다. 이�
 | Default Fallback | Chatbot이 사용자의 발화를 알아듣지 못한 상황을 나타내는 말입니다. Default Fallback 상황을 대응하는 것은 굉장히 중요합니다. Chatbot이 학습한 내용에서 의도(Intent)를 찾지 못했을 때 어떻게 반응하느냐에 따라 사용자의 만족도가 달라질 수 있습니다. 또한 Default Fallback이 발생한 사용자 발화를 추가적으로 학습하는 과정이 필요합니다. | 못알아 들었어요 |
 
 ### 다음으로 할 일
-위에서 나온 Chatbot 관련 개념에 익숙해지셨다면, 본격적으로 CAAS에서 챗봇을 만들어 보세요!
+위에서 나온 Chatbot 관련 개념에 익숙해지셨다면, 본격적으로 Singlex Chatbot Platform에서 챗봇을 만들어 보세요!
 

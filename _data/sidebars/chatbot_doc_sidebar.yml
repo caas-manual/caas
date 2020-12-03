@@ -157,6 +157,10 @@ entries:
     - title: Native App(API)
       url: /channel_native_app.html
       output: web, pdf
+
+    - title: Front UI
+      url: /channel_front_ui.html
+      output: web, pdf
     
     - title: Facebook
       url: /channel_facebook.html
@@ -185,6 +189,8 @@ entries:
     - title: 사용자 권한 관리
       url: /manage_user_roles.html
       output: web, pdf
+
+
 
 
   

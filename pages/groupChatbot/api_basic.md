@@ -22,7 +22,8 @@ next: {
   <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin:0px 5px"></i>[API란?](http://terms.naver.com/entry.nhn?docId=1179553&cid=40942&categoryId=32837)</span>
 
 해당 메뉴에서는 다음과 같은 내용을 이용할 수 있습니다.<br/>
- - [API 등록/수정](api_basic.html#api-등록수정)  
+ - [API 등록/수정](api_basic.html#api-등록수정)
+ - [API 등록 예시](api_basic.html#api-등록-예시)
  - [API 조회](api_basic.html#api-조회)
  - [API 업로드/다운로드](api_basic.html#api-업로드다운로드)
 
@@ -52,7 +53,6 @@ API 등록 요청 화면 입니다.
 &nbsp;&nbsp;&nbsp;&nbsp; API URL에서 요구하는 파라미터를 추가하려면 테이블 우측의 '+' 버튼을 클릭하여 추가합니다.<br/>
 - ⑧ API 호출 후 사용 되는 값을 성정 하는 Body 부분 입니다. <br/>
 &nbsp;&nbsp;&nbsp;&nbsp; API 메서드가 POST일 경우만 셋팅 가능 하며 추가하려면 테이블 우측의 '+' 버튼을 클릭하여 추가 하거나, Editor로 직접 입력 선택 후 JSON 형식으로 텍스트를 추가합니다.<br/>
-
  
 #### API 메서드 / Request URL
 메서드는 클라이언트와 Chatbot 서버 사이에 이루어지는 요청(Request)과 응답(Response) 데이터를 전송하는 방식입니다. 
@@ -99,10 +99,11 @@ parameter 입력 후, 화면 제일 하단의 **테스트** 버튼을 클릭해,
 
 <!-- ** 수정 필요 : JSON으로 보여지고 tree는 API 노드에서 확인 가능함을 보여주기 -->
 #### Response API
-실행 성공시, Response API에서 JSON 형태의 데이터가 조회됩니다.<br/>
+먼저 API를 저장한 뒤 [방화벽 차단 해제 신청](api_basic.html#방화벽-차단-해제-신청) 과정을 거친 다음에 테스트 실행 결과를 확인할 수 있습니다.<br/>
+등록한 API가 제대로 실행되었을 경우, Response API에서 JSON 형태의 데이터가 조회됩니다.<br/>
 API 적용 결과 조회된 데이터를 JSON형태로 조회해서 보여줍니다. 실패시 디버그 메세지 또는 아무런 데이터가 조회되지 않습니다.
 <!-- API 테스트 결과 화면(JSON) -->
-{% include image.html file="api/08_api_basic_response_json.PNG" max-width="900" caption="Response API 예시" %}
+{% include image.html file="api/08_api_basic_response_json_2.PNG" max-width="900" caption="Response API 예시" %}
   
 #### 저장
 API 정보 정상 입력 후 **저장** 버튼을 클릭해, API 등록 정보를 저장합니다. 
@@ -110,6 +111,46 @@ API 정보 정상 입력 후 **저장** 버튼을 클릭해, API 등록 정보�
 #### 취소
 {% include callout.html content="위치 : [APIs] - [API클릭] - [취소]" type="default" %}
 API 상세화면의 우측 하단에 **취소**  버튼이 존재합니다.  **취소**  클릭시, API 목록화면으로 이동하고, 작성하던 정보는 삭제됩니다. 
+
+#### 방화벽 차단 해제 신청
+API를 등록한 뒤 사용하기 위해서는 먼저 방화벽 차단 해제가 완료되어야 합니다. API를 생성하고 저장하면 아래의 그림과 같이 화면 우측 하단에 '방화벽 차단 해제' 버튼이 생긴 것을 확인할 수 있습니다. 해제를 하려면 '방화벽 차단 해제' 버튼을 클릭합니다.<br/>
+{% include image.html file="api/11_api_firewall_1.PNG" max-width="900" caption="API 방화벽 차단 해제 신청" %}
+
+만일 같은 챗봇 내에서 동일한 API 또는 url가 이미 해제 신청 중일시, '방화벽 차단 해제' 버튼을 클릭하면 아래와 같은 알림 메세지 팝업이 나타납니다.
+{% include image.html file="api/11_api_firewall_6.PNG" max-width="900" caption="동일 API 해제 신청 중인 경우 알림 메세지" %}
+
+방화벽 차단 해제를 취소하고 싶다면 '방화벽 차단 해제 취소' 버튼을 클릭하면 됩니다.
+{% include image.html file="api/11_api_firewall_5.PNG" max-width="900" caption="API 방화벽 차단 해제 취소" %}
+
+방화벽 차단 해제가 되었다면 API의 상세화면에서 아래와 같이 버튼이 '방화벽 차단 해제 완료' 표시가 되면서 비활성화 됩니다.
+{% include image.html file="api/11_api_firewall_4.PNG" max-width="900" caption="API 방화벽 차단 해제 완료" %}
+
+
+## API 등록 예시
+실제 API를 등록하고 사용하기 위해서는 사용하고자 하는 API의 사이트에서 API key 발급 및 파라미터들을 확인해야 합니다.<br/>
+예시로 보이는 API는 날씨 오픈 API이며 <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin:0px 5px"></i>[여기에서](https://openweathermap.org/)</span> 확인 가능합니다.<br/>
+
+{% include image.html file="api/00_api_basic_example_weatherAPI_1.png" max-width="900" caption="오픈 API 목록" %}<br/>
+
+위 그림 상단의 API 카테고리로 들어가면 사용할 수 있는 API들의 목록을 볼 수 있습니다. 'API doc'로 가면 API를 사용하기 위한 상세 스펙을 확인할 수 있고 'Subscribe'로 들어가면 API 구독 및 API key를 발급받을 수 있습니다.
+
+### API key 발급
+{% include image.html file="api/00_api_basic_example_weatherAPI_2.png" max-width="900" caption="오픈 API 구독" %}<br/>
+'Subscribe' 버튼을 누르고 들어가면 사용하고자 하는 요금에 맞는 것을 선택하여 구독하고 API Key를 받을 수 있습니다. 예시에서는 요금 Free로 선택하여 API key를 발급받았습니다.<br/>
+
+{% include image.html file="api/00_api_basic_example_weatherAPI_3.png" max-width="900" caption="API key 발급" %}<br/>
+key 발급 과정을 거치고 나서 화면 우측 상단의 계정명 > My API Keys로 들어가면 지금까지 발급 받은 API key 목록을 확인할 수 있습니다.<br/>
+
+### API 상세 스펙 확인
+{% include image.html file="api/00_api_basic_example_weatherAPI_4.png" max-width="900" caption="API 상세 스펙 확인" %}<br/>
+API 목록에서 'API doc' 버튼을 누르고 들어가면 API를 사용하기 위해 필요한 파라미터들을 소개하고 있습니다. 
+위 그림은 제공하는 기능 중 city name으로 날씨 데이터를 조회하는 예시입니다.<br/>
+그림 하단의 API call은 해당 오픈 API의 url 사용 예시를 보여줍니다. 'api.openweathermap.org/data/2.5/weather?'뒤에 붙은 파라미터 'q'의 값으로 city name을 넣고 'appid'의 값으로 발급받은 API key를 넣습니다.<br/>
+해당 문서의 Parameters에서는 원하는 조건에 필요한 파라미터들을 확인할 수 있고 본 챗봇 서비스에서는 Query Parameter에 등록하여 사용할 수 있습니다.
+메소드의 경우 예시 url 구성 방식을 통해 GET 방식을 사용하는 것을 확인할 수 있습니다.
+
+{% include image.html file="api/00_api_basic_example_weatherAPI.png" max-width="900" caption="API 등록 화면 예시 - 날씨 API" %}
+날씨 오픈 API의 문서를 참고하여 API를 등록한 예시입니다.<br/>
 
 
 ## API 조회 

@@ -1,0 +1,87 @@
+{
+ "nodeList": [
+  {
+   "name": "Api Node1",
+   "description": "",
+   "nodeId": "api_160199148726300001",
+   "nodeType": "api",
+   "jumpIntentNo": null,
+   "apiNo": "d4541dd5-9b50-49fd-8897-54d1913d2009/09ca57df-d800-4a6e-9058-9fd21a2b7803",
+   "positionInfo": "{\"x\":412,\"y\":384,\"width\":160,\"height\":35}",
+   "relationInfo": "[\"speak_160199148726400004\"]",
+   "nodeItemList": [
+    {
+     "orderSeq": 0,
+     "itemInfo": "{\"request\":{\"url\":\"http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json\",\"method\":\"GET\",\"apiName\":\"일별박스오피스API\",\"header\":[],\"queryParameter\":[{\"paramId\":\"711871e9-dfa9-4bb6-a01d-08fe0fa40dab\",\"paramName\":\"key\",\"paramValue\":\"430156241533f1d058c603178cc3ca0e\",\"description\":\"발급받은키\"},{\"paramId\":\"db8a41c5-6e25-43d4-8131-2a006570c2a4\",\"paramName\":\"targetDt\",\"paramValue\":\"${어제날짜}\",\"description\":\"조회하고자 하는 날짜 (YYYYMMDD)\"}],\"pathParameter\":[],\"body\":[]},\"response\":[{\"paramNo\":\"d4541dd5-9b50-49fd-8897-54d1913d2009/751ed149-d718-4c30-bfee-22e76c1982d4\",\"paramName\":\"어제박스오피스1위\",\"paramValue\":\"$.boxOfficeResult.dailyBoxOfficeList.[0].movieNm\"}]}"
+    }
+   ],
+   "apiName": "일별박스오피스API",
+   "startNode": false
+  },
+  {
+   "name": "Function Node1",
+   "description": "",
+   "nodeId": "function_160199148726400002",
+   "nodeType": "function",
+   "jumpIntentNo": null,
+   "apiNo": null,
+   "positionInfo": "{\"x\":293,\"y\":263,\"width\":160,\"height\":35}",
+   "relationInfo": "[\"api_160199148726300001\"]",
+   "nodeItemList": [
+    {
+     "orderSeq": 0,
+     "itemInfo": "{\"script\":\"var date = new Date();\\n\\nvar year = date.getFullYear(); \\nvar month = date.getMonth()+1; // 0~11\\nvar day = date.getDate()-1; // yesterday\\n\\nif(month < 10) { \\n    month = \\\"0\\\" + month.toString(); \\n} else {\\n    month = month.toString();\\n}\\nif(day < 10) { \\n    day = \\\"0\\\" + day.toString();\\n} else {\\n    day = day.toString();\\n}\\n\\n어제날짜 = (year.toString() + month + day); // YYYYMMDD\"}"
+    }
+   ],
+   "startNode": false
+  },
+  {
+   "name": "Slot Node1",
+   "description": "",
+   "nodeId": "slot_160199148726400003",
+   "nodeType": "slot",
+   "jumpIntentNo": null,
+   "apiNo": null,
+   "positionInfo": "{\"x\":173,\"y\":163,\"width\":160,\"height\":35}",
+   "relationInfo": "[\"function_160199148726400002\"]",
+   "nodeItemList": [
+    {
+     "orderSeq": 0,
+     "itemInfo": "{\"messageSet\":[{\"message\":\"어떤 영화를 예매하시겠어요?\",\"imageUrl\":\"\",\"videoUrl\":\"\",\"isVideo\":false,\"$$hashKey\":\"object:1951\"}],\"buttons\":[],\"type\":\"basic\",\"paramNo\":\"d4541dd5-9b50-49fd-8897-54d1913d2009/00f4e44d-ac83-4376-b7fb-5cfdf0189d39\"}",
+     "paramId": "00f4e44d-ac83-4376-b7fb-5cfdf0189d39",
+     "paramName": "MovieName"
+    }
+   ],
+   "startNode": true
+  },
+  {
+   "name": "Speak Node",
+   "description": "",
+   "nodeId": "speak_160199148726400004",
+   "nodeType": "speak",
+   "jumpIntentNo": null,
+   "apiNo": null,
+   "positionInfo": "{\"x\":529,\"y\":510,\"width\":160,\"height\":35}",
+   "relationInfo": "[]",
+   "nodeItemList": [
+    {
+     "orderSeq": 0,
+     "itemInfo": "{\"messageSet\":[{\"message\":\"영화 $MovieName 저도 좋아해요.\\n어제 (${어제날짜}) 박스 오피스 1위는 ${어제박스오피스1위} 이었다고 하네요~\",\"imageUrl\":\"\",\"videoUrl\":\"\",\"isVideo\":false,\"$$hashKey\":\"object:2009\"}],\"buttons\":[],\"type\":\"basic\"}"
+    }
+   ],
+   "startNode": false
+  }
+ ],
+ "parameterList": [
+  {
+   "paramId": "d144cf05-35fc-41d1-a270-91ad3379e17d",
+   "name": "어제날짜",
+   "defaultValue": ""
+  },
+  {
+   "paramId": "751ed149-d718-4c30-bfee-22e76c1982d4",
+   "name": "어제박스오피스1위",
+   "defaultValue": ""
+  }
+ ]
+}

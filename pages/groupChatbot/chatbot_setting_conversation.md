@@ -23,7 +23,6 @@ Conversation 탭에서는 Chatbot과 대화할 때 필요한 다음과 같은 �
  - [Classification Threshold](chatbot_setting_conversation.html#classification-threshold)
  - [감정분석](chatbot_setting_conversation.html#감정분석)
 
-
 ### Classification Threshold
 Classification Threshold는 대화를 분류하는 임계값입니다. 0에서 1사이의 값을 가질 수 있으며 추론 결과의 정확도가 해당 값 이하로 분석될 시에는 Default Fallback으로 인식하게끔 설정하는 역할을 합니다.
 {% include note.html content="Classification Threshold는 Chatbot 생성 시 기본 0.3으로 저장됩니다." %}

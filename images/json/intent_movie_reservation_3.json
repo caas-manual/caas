@@ -1,0 +1,184 @@
+{
+  "botId" : "11207166-911a-4714-bfa3-dda20a2bf90e",
+  "id" : "b6fae201-e04c-4702-9ff7-c8749e22ade7",
+  "parentId" : "",
+  "df" : "9d7eef15-ae84-41ae-9df5-2e864b24cf5e",
+  "name" : "영화 예매",
+  "type" : "G",
+  "depth" : 0,
+  "isDisableML" : false,
+  "isFulfillment" : true,
+  "isSlotFilling" : false,
+  "isChatflow" : true,
+  "endConversation" : false,
+  "priority" : "N",
+  "languages" : [ "ko" ],
+  "defaultLanguage" : "ko",
+  "categoryName" : "",
+  "response" : [ {
+    "id" : "b3d71423-91e4-45f8-9c5d-79b98acded45",
+    "channelId" : "default",
+    "type" : "text",
+    "language" : "ko",
+    "message" : "{\"text\":[\"탁월한 선택이에요!\",\"영화 좋죠!\\n영화 보기 좋은 날씨에요~\"]}"
+  } ],
+  "context" : [ {
+    "id" : "6722871d-7164-4457-87c0-772b1d87b807",
+    "type" : "O",
+    "name" : "b6fae201-e04c-4702-9ff7-c8749e22ade7",
+    "lifespan" : 5
+  } ],
+  "event" : [ {
+    "id" : "d04eb6bf-9e86-46d7-a195-f8eddac835c6",
+    "name" : "84c07f09-c6ba-4307-9ab5-ec215dad604f",
+    "isChatflow" : true
+  } ],
+  "phrase" : [ {
+    "id" : "640336b8-5d3c-44cd-9ef4-a2ab523c21fa",
+    "df" : "",
+    "phrase" : "로마의 휴일 보고싶어",
+    "language" : "ko",
+    "order" : 0,
+    "sentence" : [ {
+      "entityId" : "8a65d7be-95e2-42cc-a83d-ce3ad3517ad3",
+      "name" : "MovieName",
+      "paramId" : "5b371b03-386b-4ea7-b94e-aad684beed15",
+      "sentence" : "로마의 휴일",
+      "start" : 0,
+      "end" : 6
+    } ]
+  }, {
+    "id" : "9c3d1567-31ab-4c2d-b1e7-134fd931ab29",
+    "df" : "",
+    "phrase" : "나 로마의 휴일 볼래",
+    "language" : "ko",
+    "order" : 0,
+    "sentence" : [ {
+      "entityId" : "8a65d7be-95e2-42cc-a83d-ce3ad3517ad3",
+      "name" : "MovieName",
+      "paramId" : "633c3642-374c-4ba2-b2ec-ead17ab1e343",
+      "sentence" : "로마의 휴일",
+      "start" : 2,
+      "end" : 8
+    } ]
+  }, {
+    "id" : "b12ccdc0-642e-4466-93fa-763c071aa129",
+    "df" : "",
+    "phrase" : "영화 보고 싶어",
+    "language" : "ko",
+    "order" : 0
+  }, {
+    "id" : "b2ae152b-8349-489c-a05b-0fc60b16f89f",
+    "df" : "",
+    "phrase" : "로마의 휴일 예매하려구",
+    "language" : "ko",
+    "order" : 0,
+    "sentence" : [ {
+      "entityId" : "8a65d7be-95e2-42cc-a83d-ce3ad3517ad3",
+      "name" : "MovieName",
+      "paramId" : "196a3db4-893d-4aa9-a178-0b5c351c3275",
+      "sentence" : "로마의 휴일",
+      "start" : 0,
+      "end" : 6
+    } ]
+  }, {
+    "id" : "d47bc5fa-4bbb-49a2-9fd1-2a67ea8ece80",
+    "df" : "",
+    "phrase" : "나 영화 볼래",
+    "language" : "ko",
+    "order" : 0
+  }, {
+    "id" : "ff28589c-9c27-44b9-afa2-e7e5070f7e10",
+    "df" : "",
+    "phrase" : "영화 예매하려구",
+    "language" : "ko",
+    "order" : 0
+  } ],
+  "param" : [ {
+    "id" : "00f4e44d-ac83-4376-b7fb-5cfdf0189d39",
+    "df" : "4de18762-99a3-4c49-b15b-878823f33681",
+    "entityId" : "8a65d7be-95e2-42cc-a83d-ce3ad3517ad3",
+    "name" : "MovieName",
+    "value" : "MovieName",
+    "isRequired" : false,
+    "defaultValue" : "",
+    "order" : 0,
+    "prompt" : "{\"promptInfo\":[]}",
+    "isList" : false,
+    "entity" : "MovieName"
+  }, {
+    "id" : "37938cc8-4b25-47d2-a4cc-2c7f170447ea",
+    "df" : "40f7f2fe-e496-4e21-808a-b264798cc20a",
+    "entityId" : "af9fade4-af42-4eb7-a55e-6941d85d7c97",
+    "name" : "Cinema",
+    "value" : "Cinema",
+    "isRequired" : false,
+    "defaultValue" : "",
+    "order" : 0,
+    "prompt" : "{\"promptInfo\":[]}",
+    "isList" : false,
+    "entity" : "Cinema"
+  }, {
+    "id" : "75d8eb22-9a4b-4e3e-91f8-430ce2d02991",
+    "df" : "9d3a0f9d-07f8-45a0-80d5-ae226d6d541e",
+    "entityId" : "23a9b1ca-6eb3-419a-8a26-4166cf9cec12",
+    "name" : "NumOfAdults",
+    "value" : "NumOfAdults",
+    "isRequired" : false,
+    "defaultValue" : "",
+    "order" : 0,
+    "prompt" : "{\"promptInfo\":[]}",
+    "isList" : false,
+    "entity" : "sys.number"
+  }, {
+    "id" : "bee26251-1723-4888-b4af-eaaa02da599c",
+    "df" : "b56400be-c004-4da6-b4a0-1a2a2f5cecee",
+    "entityId" : "467f33f1-c72d-40b7-9ef1-ca0aceb35652",
+    "name" : "MovieDate",
+    "value" : "MovieDate",
+    "isRequired" : false,
+    "defaultValue" : "",
+    "order" : 0,
+    "prompt" : "{\"promptInfo\":[]}",
+    "isList" : false,
+    "entity" : "sys.date"
+  } ],
+  "chatflow" : [ {
+    "id" : "3cd8e56a-3baa-4949-bc93-5b33d7ae3bbb",
+    "intentId" : "b6fae201-e04c-4702-9ff7-c8749e22ade7",
+    "name" : "영화 예매",
+    "description" : "",
+    "node" : [ {
+      "id" : "listen_160066561754807562",
+      "intentId" : "b6fae201-e04c-4702-9ff7-c8749e22ade7",
+      "apiId" : "",
+      "eventId" : "d04eb6bf-9e86-46d7-a195-f8eddac835c6",
+      "jumpId" : "",
+      "type" : "listen",
+      "name" : "Listen Node",
+      "description" : "",
+      "position" : "{\"x\":42,\"y\":58,\"width\":160,\"height\":35}",
+      "relation" : "[\"11207166-911a-4714-bfa3-dda20a2bf90e/speak_160066561754809482\"]",
+      "language" : "ko"
+    }, {
+      "id" : "speak_160066561754809482",
+      "intentId" : "",
+      "apiId" : "",
+      "eventId" : "",
+      "jumpId" : "",
+      "type" : "speak",
+      "name" : "Speak Node",
+      "description" : "",
+      "position" : "{\"x\":251,\"y\":117,\"width\":160,\"height\":35}",
+      "relation" : "[]",
+      "language" : "ko",
+      "item" : [ {
+        "id" : "8858b6c4-f61b-4986-8f9f-f79d7699fee9",
+        "paramId" : "",
+        "language" : "ko",
+        "order" : 0,
+        "info" : "{\"messageSet\":[{\"message\":\"탁월한 선택이에요!\",\"imageUrl\":\"\",\"videoUrl\":\"\",\"isVideo\":false,\"$$hashKey\":\"object:1772\"},{\"message\":\"영화 좋죠!\\n영화 보기 좋은 날씨에요~\",\"imageUrl\":\"\",\"videoUrl\":\"\",\"isVideo\":false,\"$$hashKey\":\"object:1784\"}],\"buttons\":[],\"type\":\"basic\"}"
+      } ]
+    } ]
+  } ]
+}
