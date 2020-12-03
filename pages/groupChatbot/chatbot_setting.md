@@ -7,8 +7,8 @@ sidebar: chatbot_doc_sidebar
 permalink: chatbot_setting.html
 folder: groupChatbot
 previous: {
-    title: APIs, 
-    url: api_basic.html
+    title: Contents, 
+    url: contents_basic.html
 }
 next: {
     title: Language,

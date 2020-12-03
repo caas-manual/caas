@@ -106,7 +106,11 @@ entries:
 
     - output: web, pdf
       title: APIs
-      url: /api_basic.html      
+      url: /api_basic.html 
+
+    - output: web, pdf
+      title: Contents
+      url: /contents_basic.html      
 
     - output: web, pdf
       subfolders:

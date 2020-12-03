@@ -11,8 +11,8 @@ previous: {
     url: entity_system.html
 }
 next: {
-    title: General,
-    url: chatbot_setting.html
+    title: Contents,
+    url: contents_basic.html
 }
 ---
 

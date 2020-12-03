@@ -11,6 +11,7 @@ allowed-tags:
   - chatflow
   - channel
   - API
+  - contents
   - settings
   - tutorial
   - entity
