@@ -73,7 +73,7 @@ API 선택 박스에서 **근무지 날씨 조회**를 선택하여 적용합니
 <!-- API 노드 전1 -->
 {% include image.html file="weatherApi/01_weather_emp_2.PNG" max-width="900" caption="근무자 날씨 조회 API 선택" %} 
 
-요청 Parameter탭에서 Query Parmater에 'chatbotId'와 'userId'에 빨간색 박스로 표시된 입력란에 아래 그림과 같이 입력합니다.
+요청 Parameter탭에서 Query Parmater에 'chatbotId'와 'userId'에 빨간색 박스로 표시된 입력란에 아래 그림과 같이 입력합니다. (챗봇아이디, $userId)
 <!-- API 노드 전2 -->
 {% include image.html file="weatherApi/01_weather_emp_3.PNG" max-width="900" caption="요청 Parameter 설정" %}
 {% include note.html content="챗봇 아이디 설정은 사이드 메뉴의 [Settings] > Chatbot Info. > Bot ID 에서 확인할 수 있습니다" %} 
@@ -102,19 +102,6 @@ API 선택 박스에서 **근무지 날씨 조회**를 선택하여 적용합니
 {% include image.html file="weatherApi/01_weather_emp_4.PNG" max-width="900" caption="응답 Parameter - Parameter 추가" %} 
 
 파라미터들을 추가해 줬으면 좌측의 API Tree에서 아래의 그림과 같이 필요한 파라미터를 마우스로 드래그하여 출력 Paramter의 해당 입력란에 넣어줍니다. 매칭할 파라미터들은 다음과 같습니다.
-<!-- 
-- local1 - 지역1
-- local2 - 지역2
-- t1h - 현재온도
-- tmx - 최고온도
-- tmn - 최저온도
-- tmx1 - 내일최고
-- tmn1 - 내일최저
-- tmx2 - 모레최고
-- tmn2 - 모레최저
-- weatherList - 오늘날씨목록
-- weatherList1 - 내일하늘
-- weatherList2 - 모레하늘 -->
 
 | API Tree | 출력 Paramter | 
 |--------|-------|
@@ -139,28 +126,70 @@ API 선택 박스에서 **근무지 날씨 조회**를 선택하여 적용합니
 #### 국내 날씨 조회
 아래의 그림과 같이 **국내 날씨 조회** API 노드를 클릭합니다.
  <!-- 국내 날씨 API 챗플로우 -->
-{% include image.html file="weatherApi/02_weather_world_1.PNG" max-width="900" caption="국내 날씨 조회 챗플로우" %} 
+{% include image.html file="weatherApi/03_weather_nation_1.PNG" max-width="900" caption="국내 날씨 조회 챗플로우" %} 
 
-
+API 선택 박스에서 **국내 날씨 조회**를 선택하여 적용합니다.
 <!-- API 노드 전1 -->
-{% include image.html file="weatherApi/02_weather_world_2.PNG" max-width="900" caption="국내 날씨 조회 API 선택" %} 
+{% include image.html file="weatherApi/03_weather_nation_2.PNG" max-width="900" caption="국내 날씨 조회 API 선택" %} 
+
+요청 Parameter탭에서 Query Parmater에 'date'와 'localQuery'에 빨간색 박스로 표시된 입력란에 아래 그림과 같이 입력합니다. ($date, $localQuery)
 <!-- API 노드 전2 -->
-{% include image.html file="weatherApi/02_weather_world_3.PNG" max-width="900" caption="요청 Parameter 설정" %} 
+{% include image.html file="weatherApi/03_weather_nation_3.PNG" max-width="900" caption="요청 Parameter 설정" %} 
+
+응답 Parameter탭으로 넘어가서 출력 Paramerter의 우측의 **Parameter 추가**버튼을 클릭하면 추가할 수 있는 파라미터 목록을 확인할 수 있습니다.<br/>
+목록에서 확인할 수 있는 파라미터들은 다음과 같습니다. 파라미터들은 **userId**, **오늘강수**, **오늘하늘**, **지역명**, **내일날짜**, **모레날짜**를 **제외**하고 추가해줍니다. (근무지 날씨 조회 API와 동일하게 세팅합니다)
+
+- localQuery
+- 내일날짜
+- 내일최고
+- 내일최저
+- 내일하늘
+- 모레날짜
+- 모레최고
+- 모레최저
+- 모레하늘
+- 오늘강수
+- 오늘날씨목록
+- 오늘하늘
+- 지역1
+- 지역2
+- 지역명
+- 최고온도
+- 최저온도
+- 현재온도
+
 <!-- API 노드 후1 -->
-{% include image.html file="weatherApi/02_weather_world_4.PNG" max-width="900" caption="응답 Parameter - API tree와 출력 Parameter 매칭1" %} 
+{% include image.html file="weatherApi/03_weather_nation_4.PNG" max-width="900" caption="응답 Parameter - API tree와 출력 Parameter 매칭1" %} 
+
+파라미터들을 추가해 줬으면 좌측의 API Tree에서 아래의 그림과 같이 필요한 파라미터를 마우스로 드래그하여 출력 Paramter의 해당 입력란에 넣어줍니다. 매칭할 파라미터들은 다음과 같습니다.
+
+| API Tree | 출력 Paramter | 
+|--------|-------|
+| local1 | 지역1 |
+| local2 | 지역2 |
+| t1h | 현재온도 |
+| tmx | 최고온도 |
+| tmn | 최저온도 |
+| tmx1 | 내일최고 |
+| tmn1 | 내일최저 |
+| tmx2 | 모레최고 |
+| tmn2 | 모레최저 |
+| weatherList | 오늘날씨목록 |
+| weatherList1 | 내일하늘 |
+| weatherList2 | 모레하늘 |
 
 #### 세계 도시 조회
 아래의 그림과 같이 **세계 도시 조회** API 노드를 클릭합니다.
  <!-- 세계 도시 API 챗플로우 -->
-{% include image.html file="weatherApi/03_weather_world_1.PNG" max-width="900" caption="세계 도시 조회 챗플로우" %} 
+{% include image.html file="weatherApi/02_weather_world_1.PNG" max-width="900" caption="세계 도시 조회 챗플로우" %} 
 
 API 선택 박스에서 **세계 도시 조회**를 선택하여 적용합니다.
 <!-- API 노드 전1 -->
-{% include image.html file="weatherApi/03_weather_world_2.PNG" max-width="900" caption="세계 도시 조회 API 선택" %} 
+{% include image.html file="weatherApi/02_weather_world_2.PNG" max-width="900" caption="세계 도시 조회 API 선택" %} 
 
-요청 Parameter탭에서 Query Parmater에 'cityName'와 'countryName'에 빨간색 박스로 표시된 입력란에 아래 그림과 같이 입력합니다.
+요청 Parameter탭에서 Query Parmater에 'cityName'와 'countryName'에 빨간색 박스로 표시된 입력란에 아래 그림과 같이 입력합니다. ($cityName, $countryName)
 <!-- API 노드 전2 -->
-{% include image.html file="weatherApi/03_weather_world_3.PNG" max-width="900" caption="요청 Parameter 설정" %} 
+{% include image.html file="weatherApi/02_weather_world_3.PNG" max-width="900" caption="요청 Parameter 설정" %} 
 
 응답 Parameter탭으로 넘어가서 출력 Paramerter의 우측의 **Parameter 추가**버튼을 클릭하면 추가할 수 있는 파라미터 목록을 확인할 수 있습니다.<br/>
 목록에서 확인할 수 있는 파라미터들은 다음과 같습니다. 파라미터는 **도시ID**만 추가해줍니다.
