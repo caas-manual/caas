@@ -193,6 +193,10 @@ entries:
     - title: Dashboard
       url: /manage_dashboard.html
       output: web, pdf
+
+    - title: Alarm
+      url: /manage_alarm.html
+      output: web, pdf
     
     - title: 사용자 권한 관리
       url: /manage_user_roles.html

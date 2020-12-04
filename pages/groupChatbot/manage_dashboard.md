@@ -11,8 +11,8 @@ previous: {
     url: manage_training.html
 }
 next: {
-    title: 사용자 관리,
-    url: manage_user_roles.html
+    title: Alarm,
+    url: manage_alarm.html
 }
 ---
 

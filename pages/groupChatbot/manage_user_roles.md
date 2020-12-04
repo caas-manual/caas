@@ -7,8 +7,8 @@ sidebar: chatbot_doc_sidebar
 permalink: manage_user_roles.html
 folder: groupChatbot
 previous: {
-    title: Dashboard, 
-    url: manage_dashboard.html
+    title: Alarm, 
+    url: manage_alarm.html
 }
 ---
 
