@@ -29,8 +29,8 @@ next: {
  3. Intent 업로드
  4. Intent 업로드
  
- API 및 각 파일을 업로드하려면 아래의 파일을 다운받으 실 수 있습니다.<br/>
-* 다운로드 파일: <a href="zipFile/weatherInfo.zip" download>weatherInfo.zip</a>
+ API 및 각 파일을 업로드하려면 아래의 파일을 다운받으실 수 있습니다.<br/>
+<!-- * 다운로드 파일: <a href="zipFile/weatherInfo.zip" download>weatherInfo.zip</a> -->
 
 ## 날씨 API 등록
  1. 폴더 안의 api.zip 압축 풀기
@@ -200,7 +200,7 @@ API 선택 박스에서 **세계 도시 조회**를 선택하여 적용합니다
 - 도시ID
 - 장소이름
 <!-- API 노드 후1 -->
-{% include image.html file="weatherApi/03_weather_world_5.PNG" max-width="900" caption="응답 Parameter - API tree와 출력 Parameter 매칭1" %} 
+{% include image.html file="weatherApi/02_weather_world_5.PNG" max-width="900" caption="응답 Parameter - API tree와 출력 Parameter 매칭1" %} 
 
 파라미터들을 추가해 줬으면 좌측의 API Tree에서 아래의 그림과 같이 필요한 파라미터를 마우스로 드래그하여 출력 Paramter의 해당 입력란에 넣어줍니다. 매칭할 파라미터들은 다음과 같습니다.
 
@@ -209,4 +209,4 @@ API 선택 박스에서 **세계 도시 조회**를 선택하여 적용합니다
 | cityId | 도시ID |
 
 <!-- API 노드 후2 -->
-{% include image.html file="weatherApi/03_weather_world_4.PNG" max-width="900" caption="응답 Parameter - API tree와 출력 Parameter 매칭1" %} 
+{% include image.html file="weatherApi/02_weather_world_4.PNG" max-width="900" caption="응답 Parameter - API tree와 출력 Parameter 매칭2" %} 
