@@ -49,14 +49,4 @@ History 탭에서는 최근 30일간 알림 발송 건수를 확인할 수 있�
 본 테이블에서는 알림 유형과 알림 발송 시간을 확인할 수 있는데, 이 때 알림 유형은 Settings 탭의 알림 설정 하위의 알림 유형을 말합니다.
 {% include image.html file="alarm\06_alarm_history.PNG" max-width="900" caption="최근 30일간 알림 발송 건수" %}
 
-## Custom
- {% include callout.html content="화면 위치 : [Settings] > [Alarm] > Custom 탭 선택" type="default" %}
 
-Alarm 메뉴의 Custom 탭 화면 접근은 **System Admin** 권한을 가진 Chatbot 개발자만 가능합니다.<br/>
-Custom 탭에서는 System Admin이 알림 내용을 보다 자유롭게 구성하여 알림을 전송할 수 있습니다. 
-
-### 사용자 지정 알림
-사용자 지정 알림은 Settings 탭에서 시스템 운영자 알림을 받도록 체크한 경우 전송됩니다. <br/>
-전송 시기는 System Admin이 우측 상단 알림전송 버튼을 클릭할 때 마다 수시로 전송되며 수신 그룹을 본 Chatbot의 수신계정 뿐만 아니라 본 Chatbot이 속한 계약, 더 나아가 시스템 내 모든 Chatbot의 수신계정으로 설정할 수도 있습니다.
-
-{% include image.html file="alarm\07_alarm_custom.PNG" max-width="900" caption="사용자 지정 알림" %}
