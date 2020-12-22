@@ -34,10 +34,13 @@ next: {
 ## 날씨 API 등록
  1. 폴더 안의 api.zip 압축 풀기
  2. api 폴더 내의 json 파일 확인
-  - ① 근무지 날씨 조회.json<br/>
+  <!-- - ① 근무지 날씨 조회.json<br/>
   - ② 국내 날씨 조회.json<br/>
-  - ③ 세계 도시 조회.json<br/>
-  ① 근무지 날씨 조회 API는 챗봇 사용자의 근무지 위치에서의 날씨 정보를 조회합니다. ② 국내 날씨 조회는 사용자가 챗봇에 검색한 국내 지역의 날씨를 조회합니다. (ex) 서울 날씨
+  - ③ 세계 도시 조회.json<br/> -->
+  - ① 국내 날씨 조회.json<br/>
+  - ② 세계 도시 조회.json<br/>
+  <!-- ① 근무지 날씨 조회 API는 챗봇 사용자의 근무지 위치에서의 날씨 정보를 조회합니다. ②  -->
+  국내 날씨 조회 API는 사용자가 챗봇에 검색한 국내 지역의 날씨 정보를 조회합니다. 세계 도시 조회 API는 검색한 해외국가 및 도시의 정보를 제공합니다.
  3. 챗봇 사이드 메뉴의 APIs에서 API 파일들을 업로드할 수 있습니다. 자세한 방법은 <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin:0px 5px"></i>[API의 업로드](api_basic.html#업로드)</span>에서 참조하실 수 있습니다.
  4. 방화벽 차단 해제
  챗플로우에서 API를 사용하기 위해서는 방화벽 차단 해제를 반드시 해줘야 합니다. 자세한 방법은 <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin:0px 5px"></i>[방화벽 차단 해제 신청](api_basic.html#방화벽-차단-해제-신청)에서 참조하실 수 있습니다.
@@ -57,26 +60,25 @@ next: {
 <!-- {% include note.html content="날씨 API들을 방화벽 차단 해제를 완료하고 난 뒤에 Intent를 업로드하면 순서 4(Chatflow(챗플로우)의 API 노드 설정)를 스킵할 수 있으므로 권장드립니다." %} -->
  1. 폴더 안의 intent.zip 압축 풀기
  2. intent 폴더 내의 json 파일 확인
-  - ① 공통-근무지 날씨 조회.json<br/>
+<!--   - ① 공통-근무지 날씨 조회.json<br/>
   - ② 공통-날씨 조회.json<br/>
-  - ③ 공통-세계 도시 조회.json<br/>
+  - ③ 공통-세계 도시 조회.json<br/> -->
+  - ① 공통-날씨 조회.json<br/>
+  - ② 공통-세계 도시 조회.json<br/>
  3. 챗봇 사이드 메뉴의 Intents에서 Intent 파일들을 업로드할 수 있습니다. 자세한 방법은 <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin:0px 5px"></i>[Intent의 업로드](intent_basic.html#업로드)</span>에서 참조하실 수 있습니다. 
  4. Chatflow(챗플로우)의 API 노드 설정
- 업로드한 Intent(근무지 날씨 조회, 국내 날씨 조회, 세계 도시 조회)들의 Chatflow 화면으로 들어가려면 Intents 메뉴의 답변 유형에서 'Chatflow'로 검색한 뒤 Intent 목록의 우측에 있는 'Chatflow>' 버튼을 클릭하여 진입할 수 있습니다.<br/>
+ 업로드한 Intent(국내 날씨 조회, 세계 도시 조회)들의 Chatflow 화면으로 들어가려면 Intents 메뉴의 답변 유형에서 'Chatflow'로 검색한 뒤 Intent 목록의 우측에 있는 'Chatflow>' 버튼을 클릭하여 진입할 수 있습니다.<br/>
  Chatflow 화면으로 들어가면 API 노드 설정을 해줘야 하며 자세한 기능들은 [API Node](intent_response_chatflow_api.html)에서 확인하실 수 있습니다.<br/>
 
 
-#### 근무지 날씨 조회
+<!-- #### 근무지 날씨 조회
 아래의 그림과 같이 **근무지 날씨 조회** API 노드를 클릭합니다.
-<!-- 근무지 API 챗플로우 -->
 {% include image.html file="weatherApi/01_weather_emp_1.PNG" max-width="900" caption="근무자 날씨 조회 챗플로우" %}
 
 API 선택 박스에서 **근무지 날씨 조회**를 선택하여 적용합니다.
-<!-- API 노드 전1 -->
 {% include image.html file="weatherApi/01_weather_emp_2.PNG" max-width="900" caption="근무자 날씨 조회 API 선택" %} 
 
 요청 Parameter탭에서 Query Parmater에 'chatbotId'와 'userId'에 빨간색 박스로 표시된 입력란에 아래 그림과 같이 입력합니다. (챗봇아이디, $userId)
-<!-- API 노드 전2 -->
 {% include image.html file="weatherApi/01_weather_emp_3.PNG" max-width="900" caption="요청 Parameter 설정" %}
 {% include note.html content="챗봇 아이디 설정은 사이드 메뉴의 [Settings] > Chatbot Info. > Bot ID 에서 확인할 수 있습니다" %} 
 
@@ -96,7 +98,7 @@ API 선택 박스에서 **근무지 날씨 조회**를 선택하여 적용합니
 - 최고온도
 - 최저온도
 - 현재온도
-<!-- API 노드 후1 -->
+
 {% include image.html file="weatherApi/01_weather_emp_4.PNG" max-width="900" caption="응답 Parameter - Parameter 추가" %} 
 
 파라미터들을 추가해 줬으면 좌측의 API Tree에서 아래의 그림과 같이 필요한 파라미터를 마우스로 드래그하여 출력 Paramter의 해당 입력란에 넣어줍니다. 매칭할 파라미터들은 다음과 같습니다.
@@ -116,11 +118,9 @@ API 선택 박스에서 **근무지 날씨 조회**를 선택하여 적용합니
 | weatherList1 | 내일하늘 |
 | weatherList2 | 모레하늘 |
 
-<!-- API 노드 후2 -->
 {% include image.html file="weatherApi/01_weather_emp_5.PNG" max-width="900" caption="응답 Parameter - API tree와 출력 Parameter 매칭1" %}
-<!-- API 노드 후3 : 변경되어서 수정 필요-->
 {% include image.html file="weatherApi/01_weather_emp_6_1.PNG" max-width="900" caption="응답 Parameter - API tree와 출력 Parameter 매칭2" %} 
-<br/>
+<br/> -->
 
 #### 국내 날씨 조회
 아래의 그림과 같이 **국내 날씨 조회** API 노드를 클릭합니다.
@@ -136,7 +136,7 @@ API 선택 박스에서 **국내 날씨 조회**를 선택하여 적용합니다
 {% include image.html file="weatherApi/03_weather_nation_3.PNG" max-width="900" caption="요청 Parameter 설정" %} 
 
 응답 Parameter탭으로 넘어가서 출력 Paramerter의 우측의 **Parameter 추가**버튼을 클릭하면 추가할 수 있는 파라미터 목록을 확인할 수 있습니다.<br/>
-목록에서 확인할 수 있는 파라미터들은 다음과 같습니다. 파라미터들은 **userId**, **지역명**을 **제외**하고 추가해줍니다. (근무지 날씨 조회 API와 동일하게 세팅합니다)
+목록에서 확인할 수 있는 파라미터들은 다음과 같습니다. 파라미터들은 **userId**, **지역명**을 **제외**하고 추가해줍니다. <!-- (근무지 날씨 조회 API와 동일하게 세팅합니다) -->
 
 - localQuery
 - 내일최고
@@ -172,6 +172,7 @@ API 선택 박스에서 **국내 날씨 조회**를 선택하여 적용합니다
 | weatherList | 오늘날씨목록 |
 | weatherList1 | 내일하늘 |
 | weatherList2 | 모레하늘 |
+
 <br/>
 
 #### 세계 도시 조회
