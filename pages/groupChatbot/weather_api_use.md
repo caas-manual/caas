@@ -34,13 +34,10 @@ next: {
 ## 날씨 API 등록
  1. 폴더 안의 api.zip 압축 풀기
  2. api 폴더 내의 json 파일 확인
-  <!-- - ① 근무지 날씨 조회.json<br/>
-  - ② 국내 날씨 조회.json<br/>
-  - ③ 세계 도시 조회.json<br/> -->
   - ① 국내 날씨 조회.json<br/>
   - ② 세계 도시 조회.json<br/>
   <!-- ① 근무지 날씨 조회 API는 챗봇 사용자의 근무지 위치에서의 날씨 정보를 조회합니다. ②  -->
-  국내 날씨 조회 API는 사용자가 챗봇에 검색한 국내 지역의 날씨 정보를 조회합니다. 세계 도시 조회 API는 검색한 해외국가 및 도시의 정보를 제공합니다.
+ 국내 날씨 조회 API는 사용자가 챗봇에 검색한 국내 지역의 날씨 정보를 조회합니다. 세계 도시 조회 API는 검색한 해외국가 및 도시의 정보를 제공합니다.
  3. 챗봇 사이드 메뉴의 APIs에서 API 파일들을 업로드할 수 있습니다. 자세한 방법은 <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin:0px 5px"></i>[API의 업로드](api_basic.html#업로드)</span>에서 참조하실 수 있습니다.
  4. 방화벽 차단 해제
  챗플로우에서 API를 사용하기 위해서는 방화벽 차단 해제를 반드시 해줘야 합니다. 자세한 방법은 <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin:0px 5px"></i>[방화벽 차단 해제 신청](api_basic.html#방화벽-차단-해제-신청)에서 참조하실 수 있습니다.
@@ -60,9 +57,6 @@ next: {
 <!-- {% include note.html content="날씨 API들을 방화벽 차단 해제를 완료하고 난 뒤에 Intent를 업로드하면 순서 4(Chatflow(챗플로우)의 API 노드 설정)를 스킵할 수 있으므로 권장드립니다." %} -->
  1. 폴더 안의 intent.zip 압축 풀기
  2. intent 폴더 내의 json 파일 확인
-<!--   - ① 공통-근무지 날씨 조회.json<br/>
-  - ② 공통-날씨 조회.json<br/>
-  - ③ 공통-세계 도시 조회.json<br/> -->
   - ① 공통-날씨 조회.json<br/>
   - ② 공통-세계 도시 조회.json<br/>
  3. 챗봇 사이드 메뉴의 Intents에서 Intent 파일들을 업로드할 수 있습니다. 자세한 방법은 <span style="color:#2c3238;"><i class="fa fa-external-link-square" aria-hidden="true" style="margin:0px 5px"></i>[Intent의 업로드](intent_basic.html#업로드)</span>에서 참조하실 수 있습니다. 
