@@ -113,10 +113,6 @@ entries:
       url: /contents_basic.html      
 
     - output: web, pdf
-      title: 날씨 API 세팅
-      url: /weather_api_use.html 
-
-    - output: web, pdf
       subfolders:
       - title: Settings
         output: web, pdf

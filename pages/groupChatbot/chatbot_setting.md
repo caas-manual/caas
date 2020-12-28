@@ -7,8 +7,8 @@ sidebar: chatbot_doc_sidebar
 permalink: chatbot_setting.html
 folder: groupChatbot
 previous: {
-    title: 날씨 API 세팅, 
-    url: weather_api_use.html
+    title: Contents, 
+    url: contents_basic.html
 }
 next: {
     title: Language,

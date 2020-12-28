@@ -11,8 +11,8 @@ previous: {
     url: api_basic.html
 }
 next: {
-    title: 날씨 API 세팅,
-    url: weather_api_use.html
+    title: General,
+    url: chatbot_setting.html
 }
 ---
 

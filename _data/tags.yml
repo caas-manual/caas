@@ -12,7 +12,6 @@ allowed-tags:
   - channel
   - API
   - contents
-  - weather
   - settings
   - tutorial
   - entity
