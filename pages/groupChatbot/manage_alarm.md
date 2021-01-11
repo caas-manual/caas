@@ -1,7 +1,7 @@
 ---
-title: Alarm
-tags: [settings, basic]
-keywords: Conversation Setting
+title: System Alarm
+tags: [manage, basic]
+keywords: [alarm, 알림, 시스템 알람, notification]
 summary: Chatbot 개발자나 Admin에게 보낼 알림을 설정하는 페이지입니다.
 sidebar: chatbot_doc_sidebar
 permalink: manage_alarm.html
@@ -11,15 +11,16 @@ previous: {
     url: manage_dashboard.html
 }
 next: {
-    title: 사용자 관리,
-    url: manage_user_roles.html
+    title: Admin Push Service,
+    url: manage_admin_push_service.html
 }
 ---
 
-## Settings
- {% include callout.html content="화면 위치 : [Settings] > [Alarm] > Settings 탭 선택" type="default" %}
+{% include note.html content="System Alarm 메뉴는 Admin 권한을 가진 Chatbot 개발자만 사용할 수 있습니다." %}
 
-Alarm 메뉴의 Settings 탭 화면 접근은 **Admin** 권한을 가진 Chatbot 개발자만 가능합니다.<br/>
+## Settings
+ {% include callout.html content="화면 위치 : [Notification] > [System Alarm] > Settings 탭 선택" type="default" %}
+
 Settings 탭에서는 알림 수신 여부와 어떤 조건에서 알림을 전송할지를 정할 수 있고 알림을 수신할 대상자를 설정할 수 있습니다. 
 
 ### 알림 설정
@@ -42,7 +43,6 @@ Settings 탭에서는 알림 수신 여부와 어떤 조건에서 알림을 전�
 ## History
  {% include callout.html content="화면 위치 : [Settings] > [Alarm] > History 탭 선택" type="default" %}
 
-Alarm 메뉴의 History 탭 화면 접근은 **Admin** 권한을 가진 Chatbot 개발자만 가능합니다.<br/>
 History 탭에서는 최근 30일간 알림 발송 건수를 확인할 수 있습니다. 
 
 ### 최근 30일간 알림 발송 건수

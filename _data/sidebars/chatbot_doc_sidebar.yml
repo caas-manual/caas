@@ -190,10 +190,20 @@ entries:
       url: /manage_dashboard.html
       output: web, pdf
 
-    - title: Alarm
-      url: /manage_alarm.html
+    - output: web, pdf
+      subfolders:
+      - title: Notification
+        output: web, pdf
+        subfolderitems:
+        - title: System Alarm
+          url: /manage_alarm.html
+          output: web, pdf
+        - title: Admin Push Service
+          url: /manage_admin_push_service.html
+          output: web, pdf
+    - title: 전체 답변 정보 관리
+      url: /manage_answers.html
       output: web, pdf
-    
     - title: 사용자 권한 관리
       url: /manage_user_roles.html
       output: web, pdf
