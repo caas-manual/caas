@@ -25,7 +25,7 @@ next: {
 
 | Field | Information |
 |--------|--------|
-| URL | https://eapi.lgstation.com/chatbot/챗봇ID/gateway |
+| URL | https://eapi.singlex.com/chatbot/챗봇ID/gateway |
 | METHOD | POST |
 | HEADER | "Content-Type" : "application/json;" |
 | HEADER | "Authorization" : "Bearer " + 인증 token 값 |
@@ -500,7 +500,7 @@ Request Header에 X-CHATBOT-SESSION 값을 설정하지 않을 경우 새로운 
 
 | Field | Information |
 |--------|--------|
-| URL | https://eapi.lgstation.com/history/챗봇ID/history
+| URL | https://eapi.singlex.com/history/챗봇ID/history
 | METHOD | POST |
 | HEADER | "Content-Type" : "application/json;" |
 | HEADER | "Authorization" : "Bearer " + 인증 token 값 |
@@ -673,7 +673,7 @@ Request Header에 X-CHATBOT-SESSION 값을 설정하지 않을 경우 새로운 
 
 | Field | Information |
 |--------|--------|
-| URL | https://eapi.lgstation.com/feedback/챗봇ID/feedback
+| URL | https://eapi.singlex.com/feedback/챗봇ID/feedback
 | METHOD | POST |
 | HEADER | "Content-Type" : "application/json;" |
 | HEADER | "Authorization" : "Bearer " + 인증 token 값 |

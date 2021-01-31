@@ -300,7 +300,7 @@ Chatbot Front UI를 사용하기 위해서는 인증 토큰 정보가 필요합�
 
 | Field | Information |
 |--------|--------|
-| URL | https://eapi.lgstation.com/auth/api/reg
+| URL | https://eapi.singlex.com/auth/api/reg
 | METHOD | POST |
 | HEADER | "Content-Type" : "application/json;" |
 
@@ -374,7 +374,7 @@ public class TokenSample {
         String id = "SUBXXX1000000000";// AI 서비스 포탈 계약 번호 (예시)
         String password = "xxxxYUDKHJFLxxxxxxAEYdddddylIxYYYYYYDDDDDDDDDDDDA=="; // AI 서비스 포탈 서비스 인증키 (예시)
        
-        String apiURL = "https://eapi.lgstation.com/auth/api/reg";
+        String apiURL = "https://eapi.singlex.com/auth/api/reg";
             
         Map<String, String> requestHeaders = new HashMap<>();
         requestHeaders.put("Content-Type", "application/json");
@@ -452,7 +452,7 @@ public class TokenSample {
 var request = require('request');
 var id = 'SUBXXX1000000000';
 var password = 'xxxxYUDKHJFLxxxxxxAEYdddddylIxYYYYYYDDDDDDDDDDDDA';
-var api_url = 'https://eapi.lgstation.com/auth/api/reg';
+var api_url = 'https://eapi.singlex.com/auth/api/reg';
 var request_body = {
     "id": id,
     "password": password
@@ -480,7 +480,7 @@ import sys
 import urllib.request
 id = 'SUBXXX1000000000';
 password = 'xxxxYUDKHJFLxxxxxxAEYdddddylIxYYYYYYDDDDDDDDDDDDA';
-api_url = 'https://eapi.lgstation.com/auth/api/reg';
+api_url = 'https://eapi.singlex.com/auth/api/reg';
 request_body = "{\"id\":\""+id+"\", \"password\":\""+password+"\"}";
 
 request = urllib.request.Request(url)
