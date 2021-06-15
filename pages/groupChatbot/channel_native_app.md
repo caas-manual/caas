@@ -762,3 +762,99 @@ Request Header에 X-CHATBOT-SESSION 값을 설정하지 않을 경우 새로운 
   "message": "SUCCESS"
 }
 ```
+
+
+### Push 미확인 메시지 건수 조회 API
+Push 수신 후 사용자가 확인하지 않은 메시지 건수를 조회하는 API.
+
+#### 기본 정보
+
+| Field | Information |
+|--------|--------|
+| URL | https://eapi.singlex.com/chatbot/push/unreadMessageCount
+| METHOD | GET |
+| HEADER | "Authorization" : "Bearer " + 인증 token 값 |
+
+#### Query Parameters 정보
+
+| KEY | TYPE | Required | VALUE |
+|--------|--------|--------|--------|
+| chatbotId | String | Yes | 챗봇 아이디 |
+| languageCode | String | Yes | 챗봇 언어 코드 (Ex. ko, en) |
+| userId | String | Yes | 암호화된 사용자 아이디 ([※ 사용자 아이디 암호화 API 참고](#사용자-아이디-암호화-api)) |
+
+#### RESPONSE 정보
+
+```json
+{
+  "count": number
+}
+```
+
+| KEY | TYPE | Required | Description |
+|--------|--------|--------|--------|
+| count | number | Yes | 미확인 메시지 건수 |
+
+##### Push 미확인 메시지 건수 조회 API 예시
+
+ * "honggildong" 사용자 Push 미확인 메시지 건수 조회 API 예시 : REQUEST
+
+```
+https://eapi.singlex.com/chatbot/push/unreadMessageCount?chatbotId=5e7b3cb8-e3ee-49b7-9af5-be5ac58a28df&languageCode=ko&userId=R6XTkqJn9N5p28iyGjRBVw%3D%3D
+``` 
+
+ * "honggildong" 사용자 Push 미확인 메시지 건수 조회 API 예시 : RESPONSE
+
+```json
+{
+  "count": 3
+}
+``` 
+
+
+### 사용자 아이디 암호화 API
+사용자 아이디 문자열을 암호화하는 API.
+
+#### 기본 정보
+
+| Field | Information |
+|--------|--------|
+| URL | https://eapi.singlex.com/chatbot/encrypt
+| METHOD | GET |
+
+#### Query Parameters 정보
+
+| KEY | TYPE | Required | VALUE |
+|--------|--------|--------|--------|
+| userId | String | Yes | 사용자 아이디 |
+
+#### RESPONSE 정보
+
+```json
+{
+  "status": number,
+  "message": "string"
+}
+```
+
+| KEY | TYPE | Required | Description |
+|--------|--------|--------|--------|
+| status | number | Yes | 응답 상태 정보 |
+| message | String | Yes | 암호화된 사용자 아이디 |
+
+##### 사용자 아이디 암호화 API 예시
+
+ * "honggildong" 사용자 아이디 암호화 API 예시 : REQUEST
+
+```
+https://eapi.singlex.com/chatbot/encrypt?userId=honggildong
+``` 
+
+ * "honggildong" 사용자 아이디 암호화 API 예시 : RESPONSE
+
+```json
+{
+  "status": 200,
+  "message": "R6XTkqJn9N5p28iyGjRBVw=="
+}
+``` 
