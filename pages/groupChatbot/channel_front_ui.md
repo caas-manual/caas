@@ -294,7 +294,7 @@ Chatbot Front UI를 사용하기 위해서는 인증 토큰 정보가 필요합�
 {% include warning.html content="<br>인증 토큰 정보 호출 시에 계약 정보와 인증키 정보를 파라미터로 보내기 때문에 보안에 유의해야 하므로<br>
 인증 토큰 정보를 받아오는 기능은 서버에서 호출하여 구현하기 바랍니다." %}
 
-{% include important.html content="<br>API 인증 토큰은 발급 후 24시간 동안 유효합니다." %}
+{% include important.html content="<br>API 인증 토큰은 발급 후 12시간 동안 유효합니다." %}
 
 {% include image.html file="channel/front/front_ui_token.png" max-width="900" caption="인증 토큰 파라미터" %}
 
