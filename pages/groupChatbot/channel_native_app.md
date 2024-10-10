@@ -819,8 +819,10 @@ https://eapi.singlex.com/chatbot/push/unreadMessageCount?chatbotId=5e7b3cb8-e3ee
 
 | Field | Information |
 |--------|--------|
-| URL | https://eapi.singlex.com/chatbot/encrypt
+| URL | https://chatbotapi.ai.lgcns.com/chatbot/encrypt
 | METHOD | GET |
+
+{% include note.html content="2024-10-01 사용자 아이디 암호화 API URL 변경합니다.<br>- 변경 전 : [xxx](https://eapi.singlex.com/chatbot/encrypt)<br>- 변경 후 : https://chatbotapi.ai.lgcns.com/chatbot/encrypt" %}
 
 #### Query Parameters 정보
 
@@ -847,7 +849,7 @@ https://eapi.singlex.com/chatbot/push/unreadMessageCount?chatbotId=5e7b3cb8-e3ee
  * "honggildong" 사용자 아이디 암호화 API 예시 : REQUEST
 
 ```
-https://eapi.singlex.com/chatbot/encrypt?userId=honggildong
+https://chatbotapi.ai.lgcns.com/chatbot/encrypt?userId=honggildong
 ``` 
 
  * "honggildong" 사용자 아이디 암호화 API 예시 : RESPONSE
