@@ -815,14 +815,14 @@ https://eapi.singlex.com/chatbot/push/unreadMessageCount?chatbotId=5e7b3cb8-e3ee
 ### 사용자 아이디 암호화 API
 사용자 아이디 문자열을 암호화하는 API.
 
+{% include note.html content="2024-10-01<br>사용자 아이디 암호화 API URL 변경합니다.<br>- 변경 전 : https://eapi.singlex.com/chatbot/encrypt<br>- 변경 후 : https://chatbotapi.ai.lgcns.com/chatbot/encrypt" %}
+
 #### 기본 정보
 
 | Field | Information |
 |--------|--------|
 | URL | https://chatbotapi.ai.lgcns.com/chatbot/encrypt
 | METHOD | GET |
-
-{% include note.html content="2024-10-01 사용자 아이디 암호화 API URL 변경합니다.<br>- 변경 전 : [xxx](https://eapi.singlex.com/chatbot/encrypt)<br>- 변경 후 : https://chatbotapi.ai.lgcns.com/chatbot/encrypt" %}
 
 #### Query Parameters 정보
 
